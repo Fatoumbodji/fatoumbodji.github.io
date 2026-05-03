@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Fatou Ndiaye MBODJI | Research · Engineering · Business · Impact</title>
-  <meta name="description" content="PhD in Software Engineering (AI & Blockchain), Research Engineer, Product Owner, Business Analyst, AMOA Expert. Founder of BoostLab. Luxembourg.">
+  <title>Dr. Fatou Ndiaye MBODJI | Project Manager · Venture & Innovation</title>
+  <meta name="description" content="Project Manager, Venture & Innovation. PhD SnT/TruX. Co-founder of a TTO-supported spin-off. Design thinking facilitator. Luxembourg innovation ecosystem.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -21,610 +21,125 @@
       --serif: 'Cormorant Garamond', Georgia, serif;
       --sans: 'DM Sans', sans-serif;
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+    body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.7; overflow-x: hidden; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; z-index: 1000; opacity: 0.4; }
 
-    body {
-      background: var(--paper);
-      color: var(--ink);
-      font-family: var(--sans);
-      font-size: 15px;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    /* NOISE */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 1000;
-      opacity: 0.4;
-    }
-
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.1rem 4rem;
-      background: rgba(247, 244, 239, 0.93);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-logo {
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--accent);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--muted);
-      text-decoration: none;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      transition: color 0.2s;
-    }
-
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 4rem; background: rgba(247,244,239,0.93); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; font-weight: 500; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--mono); font-size: 11px; color: var(--muted); text-decoration: none; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.2s; }
     .nav-links a:hover { color: var(--ink); }
 
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      padding: 9rem 4rem 5rem;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 5rem;
-      align-items: center;
-      position: relative;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      right: 0; top: 0; bottom: 0;
-      width: 38%;
-      background: linear-gradient(160deg, #E4EFE9 0%, #D0E6D9 100%);
-      z-index: -1;
-    }
-
-    .hero-eyebrow {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--accent);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .hero-eyebrow::before {
-      content: '';
-      width: 2rem;
-      height: 1px;
-      background: var(--accent);
-    }
-
-    h1 {
-      font-family: var(--serif);
-      font-size: clamp(2.8rem, 4.5vw, 4.2rem);
-      font-weight: 300;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.5rem;
-    }
-
+    .hero { min-height: 100vh; padding: 9rem 4rem 5rem; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 5rem; align-items: center; position: relative; }
+    .hero::after { content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 38%; background: linear-gradient(160deg, #E4EFE9 0%, #D0E6D9 100%); z-index: -1; }
+    .hero-eyebrow { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+    .hero-eyebrow::before { content: ''; width: 2rem; height: 1px; background: var(--accent); }
+    h1 { font-family: var(--serif); font-size: clamp(2.8rem, 4.5vw, 4.2rem); font-weight: 300; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
     h1 em { font-style: italic; color: var(--accent); }
-
-    .hero-role {
-      font-family: var(--serif);
-      font-size: 1.2rem;
-      font-weight: 300;
-      color: var(--muted);
-      font-style: italic;
-      margin-bottom: 1.75rem;
-    }
-
-    .hero-bridge {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 1.75rem;
-    }
-
-    .bridge-pill {
-      font-family: var(--mono);
-      font-size: 11px;
-      padding: 0.35rem 0.85rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      transition: all 0.2s;
-    }
-
-    .bridge-pill.active {
-      background: var(--accent);
-      color: white;
-      border-color: var(--accent);
-    }
-
-    .hero-desc {
-      font-size: 15px;
-      color: #444;
-      line-height: 1.85;
-      max-width: 520px;
-      margin-bottom: 2.5rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.7rem 1.6rem;
-      font-family: var(--mono);
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-
+    .hero-role { font-family: var(--serif); font-size: 1.2rem; font-weight: 300; color: var(--muted); font-style: italic; margin-bottom: 1.25rem; }
+    .hero-formula { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.08em; padding: 0.65rem 1.1rem; border: 1px solid var(--accent); display: inline-block; margin-bottom: 1.75rem; }
+    .hero-desc { font-size: 15px; color: #444; line-height: 1.85; max-width: 520px; margin-bottom: 2.5rem; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1.6rem; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none; transition: all 0.2s; }
     .btn-primary { background: var(--accent); color: white; }
     .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); }
     .btn-outline { border: 1px solid var(--border); color: var(--ink); }
     .btn-outline:hover { border-color: var(--ink); transform: translateY(-1px); }
 
-    .hero-stats {
-      display: flex;
-      flex-direction: column;
-      gap: 1px;
-      background: var(--border);
-    }
-
-    .hero-stat {
-      background: white;
-      padding: 1.1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      animation: fadeUp 0.5s ease both;
-    }
-
+    .hero-stats { display: flex; flex-direction: column; gap: 1px; background: var(--border); }
+    .hero-stat { background: white; padding: 1.1rem 1.5rem; display: flex; align-items: center; gap: 1rem; animation: fadeUp 0.5s ease both; }
     .hero-stat:nth-child(1) { animation-delay: 0.1s; }
     .hero-stat:nth-child(2) { animation-delay: 0.2s; }
     .hero-stat:nth-child(3) { animation-delay: 0.3s; }
     .hero-stat:nth-child(4) { animation-delay: 0.4s; }
     .hero-stat:nth-child(5) { animation-delay: 0.5s; }
-
-    .stat-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      flex-shrink: 0;
-    }
-
+    .stat-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
     .stat-text { font-size: 13px; color: #444; line-height: 1.4; }
     .stat-text strong { font-weight: 500; color: var(--ink); display: block; }
 
-    /* SECTIONS */
     section { padding: 5.5rem 4rem; border-top: 1px solid var(--border); }
     section.alt { background: var(--bg-alt); }
+    .sec-header { display: flex; align-items: baseline; gap: 1.25rem; margin-bottom: 3rem; }
+    .sec-num { font-family: var(--mono); font-size: 11px; color: var(--warm); letter-spacing: 0.1em; }
+    h2 { font-family: var(--serif); font-size: clamp(1.8rem, 2.8vw, 2.6rem); font-weight: 300; letter-spacing: -0.01em; }
+    .sec-desc { font-size: 14px; color: var(--muted); max-width: 600px; margin-top: -1.5rem; margin-bottom: 2.5rem; line-height: 1.7; margin-left: calc(11px + 1.25rem + 1ch); }
 
-    .sec-header {
-      display: flex;
-      align-items: baseline;
-      gap: 1.25rem;
-      margin-bottom: 3rem;
-    }
+    .pm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
+    .pm-card { background: white; padding: 2rem 1.75rem; }
+    .pm-card-num { font-family: var(--mono); font-size: 11px; color: var(--warm); letter-spacing: 0.08em; margin-bottom: 0.75rem; }
+    .pm-card-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; color: var(--ink); margin-bottom: 0.75rem; font-style: italic; }
+    .pm-card-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
+    .pm-card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+    .mini-tag { font-family: var(--mono); font-size: 10px; padding: 0.2rem 0.6rem; border: 1px solid var(--border); color: var(--muted); letter-spacing: 0.05em; }
 
-    .sec-num {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--warm);
-      letter-spacing: 0.1em;
-    }
+    .bridge-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); }
+    .bridge-card { background: white; padding: 2rem 1.75rem; }
+    .bridge-card-num { font-family: var(--mono); font-size: 11px; color: var(--warm); letter-spacing: 0.08em; margin-bottom: 0.75rem; }
+    .bridge-card-title { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; color: var(--ink); margin-bottom: 0.75rem; font-style: italic; }
+    .bridge-card-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
+    .bridge-card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
 
-    h2 {
-      font-family: var(--serif);
-      font-size: clamp(1.8rem, 2.8vw, 2.6rem);
-      font-weight: 300;
-      letter-spacing: -0.01em;
-    }
-
-    .sec-desc {
-      font-size: 14px;
-      color: var(--muted);
-      max-width: 600px;
-      margin-top: -1.5rem;
-      margin-bottom: 2.5rem;
-      line-height: 1.7;
-      margin-left: calc(11px + 1.25rem + 1ch);
-    }
-
-    /* BRIDGE SECTION */
-    .bridge-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: var(--border);
-      margin-bottom: 3rem;
-    }
-
-    .bridge-card {
-      background: white;
-      padding: 2rem 1.75rem;
-    }
-
-    .bridge-card-num {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--warm);
-      letter-spacing: 0.08em;
-      margin-bottom: 0.75rem;
-    }
-
-    .bridge-card-title {
-      font-family: var(--serif);
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: var(--ink);
-      margin-bottom: 0.75rem;
-      font-style: italic;
-    }
-
-    .bridge-card-desc {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .bridge-card-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 1rem;
-    }
-
-    .mini-tag {
-      font-family: var(--mono);
-      font-size: 10px;
-      padding: 0.2rem 0.6rem;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      letter-spacing: 0.05em;
-    }
-
-    /* RESEARCH */
     .pub-list { display: flex; flex-direction: column; }
-
-    .pub-item {
-      display: grid;
-      grid-template-columns: 90px 1fr 80px;
-      gap: 2rem;
-      align-items: start;
-      padding: 1.6rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-
+    .pub-item { display: grid; grid-template-columns: 90px 1fr 80px; gap: 2rem; align-items: start; padding: 1.6rem 0; border-bottom: 1px solid var(--border); }
     .pub-item:last-child { border-bottom: none; }
-
-    .pub-venue {
-      font-family: var(--mono);
-      font-size: 10px;
-      font-weight: 500;
-      color: var(--accent);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding-top: 3px;
-    }
-
-    .pub-title {
-      font-family: var(--serif);
-      font-size: 1.05rem;
-      color: var(--ink);
-      margin-bottom: 4px;
-      line-height: 1.4;
-    }
-
+    .pub-venue { font-family: var(--mono); font-size: 10px; font-weight: 500; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; padding-top: 3px; }
+    .pub-title { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); margin-bottom: 4px; line-height: 1.4; }
     .pub-meta { font-size: 12px; color: var(--muted); }
+    .pub-year { font-family: var(--mono); font-size: 11px; color: var(--muted); text-align: right; padding-top: 3px; }
 
-    .pub-year {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--muted);
-      text-align: right;
-      padding-top: 3px;
-    }
+    .venture-block { background: white; border: 1px solid var(--border); padding: 2.5rem; }
+    .venture-logo { font-family: var(--serif); font-size: 1.8rem; font-weight: 300; color: var(--accent); font-style: italic; margin-bottom: 0.5rem; }
+    .venture-tag { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem; }
+    .venture-desc { font-size: 14px; color: #444; line-height: 1.85; }
 
-    /* VENTURES */
-    .venture-card {
-      background: white;
-      border: 1px solid var(--border);
-      padding: 2.5rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    .venture-logo {
-      font-family: var(--serif);
-      font-size: 2rem;
-      font-weight: 300;
-      color: var(--accent);
-      font-style: italic;
-      margin-bottom: 0.5rem;
-    }
-
-    .venture-tag {
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--muted);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 1.25rem;
-    }
-
-    .venture-desc {
-      font-size: 14px;
-      color: #444;
-      line-height: 1.85;
-      margin-bottom: 1.5rem;
-    }
-
-    .services-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1px;
-      background: var(--border);
-    }
-
-    .service-item {
-      background: var(--bg-alt);
-      padding: 0.9rem 1.25rem;
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-
-    .service-icon {
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--warm);
-      padding-top: 3px;
-      flex-shrink: 0;
-      width: 1.5rem;
-    }
-
-    .service-title {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--ink);
-      margin-bottom: 2px;
-    }
-
-    .service-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
-
-    .venture-coming {
-      margin-top: 1.5rem;
-      padding: 1rem 1.25rem;
-      border: 1px dashed var(--border);
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--muted);
-      letter-spacing: 0.05em;
-    }
-
-    /* PANELS */
-    .panels-grid {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .panel-item {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 2rem;
-      padding: 1.5rem 0;
-      border-bottom: 1px solid var(--border);
-      align-items: start;
-    }
-
+    .panels-grid { display: flex; flex-direction: column; }
+    .panel-item { display: grid; grid-template-columns: 120px 1fr; gap: 2rem; padding: 1.5rem 0; border-bottom: 1px solid var(--border); align-items: start; }
     .panel-item:last-child { border-bottom: none; }
-
-    .panel-date {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--warm);
-      letter-spacing: 0.06em;
-      padding-top: 3px;
-    }
-
-    .panel-title {
-      font-family: var(--serif);
-      font-size: 1.05rem;
-      color: var(--ink);
-      margin-bottom: 3px;
-    }
-
+    .panel-date { font-family: var(--mono); font-size: 11px; color: var(--warm); letter-spacing: 0.06em; padding-top: 3px; }
+    .panel-title { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); margin-bottom: 3px; }
     .panel-event { font-size: 13px; color: var(--muted); }
 
-    /* INSIGHTS */
-    .insights-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--border);
-    }
-
-    .insight-card {
-      background: white;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      transition: background 0.2s;
-    }
-
-    .insight-card:hover { background: #FAFAF8; }
-
-    .insight-cat {
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--accent);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .insight-title {
-      font-family: var(--serif);
-      font-size: 1.1rem;
-      color: var(--ink);
-      line-height: 1.35;
-      font-weight: 400;
-    }
-
+    .insights-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); }
+    .insight-card { background: white; padding: 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .insight-cat { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; }
+    .insight-title { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); line-height: 1.35; }
     .insight-excerpt { font-size: 13px; color: var(--muted); line-height: 1.65; }
+    .insight-date { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-top: auto; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+    .insights-cta { margin-top: 2rem; text-align: center; font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.06em; }
 
-    .insight-date {
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--muted);
-      margin-top: auto;
-      padding-top: 0.75rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .insights-cta {
-      margin-top: 2rem;
-      text-align: center;
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--muted);
-      letter-spacing: 0.06em;
-    }
-
-    /* CONTACT */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: start;
-    }
-
-    .contact-text h3 {
-      font-family: var(--serif);
-      font-size: 1.6rem;
-      font-weight: 300;
-      font-style: italic;
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
-
-    .contact-text p {
-      font-size: 14px;
-      color: #444;
-      line-height: 1.85;
-      margin-bottom: 1rem;
-    }
-
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .contact-text h3 { font-family: var(--serif); font-size: 1.6rem; font-weight: 300; font-style: italic; color: var(--accent); margin-bottom: 1rem; }
+    .contact-text p { font-size: 14px; color: #444; line-height: 1.85; margin-bottom: 1rem; }
     .contact-links { display: flex; flex-direction: column; }
-
-    .c-link {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--border);
-      text-decoration: none;
-      color: var(--ink);
-      transition: color 0.2s;
-    }
-
+    .c-link { display: flex; align-items: center; gap: 1.5rem; padding: 1rem 0; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--ink); transition: color 0.2s; }
     .c-link:last-child { border-bottom: none; }
     .c-link:hover { color: var(--accent); }
-
-    .c-label {
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      width: 65px;
-      flex-shrink: 0;
-    }
-
+    .c-label { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; width: 65px; flex-shrink: 0; }
     .c-val { font-size: 14px; }
 
-    /* FOOTER */
-    footer {
-      padding: 1.75rem 4rem;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    footer { padding: 1.75rem 4rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    footer p { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.05em; }
 
-    footer p {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--muted);
-      letter-spacing: 0.05em;
-    }
-
-    /* ANIMATIONS */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(14px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
     .hero-eyebrow { animation: fadeUp 0.4s ease both; }
     .hero h1 { animation: fadeUp 0.5s 0.1s ease both; }
     .hero-role { animation: fadeUp 0.5s 0.15s ease both; }
-    .hero-bridge { animation: fadeUp 0.5s 0.2s ease both; }
+    .hero-formula { animation: fadeUp 0.5s 0.2s ease both; }
     .hero-desc { animation: fadeUp 0.5s 0.25s ease both; }
     .hero-actions { animation: fadeUp 0.5s 0.3s ease both; }
 
-    /* RESPONSIVE */
     @media (max-width: 960px) {
       nav { padding: 1rem 1.5rem; }
       .nav-links { display: none; }
       .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; }
       .hero::after { display: none; }
       section { padding: 4rem 1.5rem; }
+      .pm-grid { grid-template-columns: 1fr 1fr; }
       .bridge-grid { grid-template-columns: 1fr 1fr; }
       .pub-item { grid-template-columns: 1fr; gap: 0.4rem; }
       .pub-year { display: none; }
-      .venture-card { grid-template-columns: 1fr; }
       .insights-grid { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       footer { flex-direction: column; gap: 0.5rem; padding: 1.5rem; }
@@ -633,532 +148,226 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="#top" class="nav-logo">FNM</a>
   <ul class="nav-links">
+    <li><a href="#pm">PM Profile</a></li>
     <li><a href="#bridge">Expertise</a></li>
     <li><a href="#research">Research</a></li>
-    <li><a href="#ventures">Ventures</a></li>
+    <li><a href="#venture">Venture</a></li>
     <li><a href="#panels">Panels</a></li>
-    <li><a href="#insights">Insights</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="top">
   <div>
-    <div class="hero-eyebrow">Luxembourg · AI · Blockchain · Fintech</div>
+    <div class="hero-eyebrow">Luxembourg · Venture · Innovation · AI</div>
     <h1>Dr. Fatou<br><em>Ndiaye MBODJI</em></h1>
-    <p class="hero-role">Research Engineer · Product Owner · Business Analyst · Founder</p>
-    <div class="hero-bridge">
-      <span class="bridge-pill active">Research</span>
-      <span class="bridge-pill active">Engineering</span>
-      <span class="bridge-pill active">Business</span>
-      <span class="bridge-pill active">Impact</span>
-    </div>
-    <p class="hero-desc">
-      PhD in Software Engineering from the University of Luxembourg (SnT/TruX).
-      I bridge academic research and real-world impact by building AI systems,
-      leading product delivery, and driving business transformation across
-      Luxembourg and West Africa.
-    </p>
+    <p class="hero-role">Project Manager · Venture & Innovation · AI & Blockchain</p>
+    <div class="hero-formula">I think like a PhD · act like a manager · translate like a business analyst</div>
+    <p class="hero-desc">PhD in Software Engineering from the University of Luxembourg (SnT/TruX). Co-founder of a TTO-supported spin-off focused on innovation. Experienced in stakeholder management, TRL and CRL analysis, design thinking, and the Luxembourg innovation ecosystem.</p>
     <div class="hero-actions">
-      <a href="#bridge" class="btn btn-primary">Explore my work</a>
+      <a href="#pm" class="btn btn-primary">My PM Profile</a>
       <a href="#contact" class="btn btn-outline">Get in touch</a>
     </div>
   </div>
   <div class="hero-stats">
     <div class="hero-stat">
       <div class="stat-dot"></div>
-      <div class="stat-text">
-        <strong>PhD · University of Luxembourg</strong>
-        AI, Blockchain and Software Engineering, SnT/TruX
-      </div>
+      <div class="stat-text"><strong>Project Holder, SnT Xplore Venture Programme</strong>Co-founder of a TTO-supported spin-off on innovation</div>
     </div>
     <div class="hero-stat">
       <div class="stat-dot"></div>
-      <div class="stat-text">
-        <strong>Published Researcher</strong>
-        IEEE/ACM ASE · IEEE SCAM · IEEE AFRICON
-      </div>
+      <div class="stat-text"><strong>Product Owner, Spin-off SnT</strong>Backlog, budget, roadmap and MVP delivery</div>
     </div>
     <div class="hero-stat">
       <div class="stat-dot"></div>
-      <div class="stat-text">
-        <strong>Product Owner, Spin-off SnT</strong>
-        LLM and RAG AI assistant, from concept to delivery
-      </div>
+      <div class="stat-text"><strong>PhD, University of Luxembourg</strong>AI, Blockchain and Software Engineering, SnT/TruX</div>
     </div>
     <div class="hero-stat">
       <div class="stat-dot"></div>
-      <div class="stat-text">
-        <strong>AMOA, QA and Business Analysis</strong>
-        Fintech mobile money, Intouch and UEMOA
-      </div>
+      <div class="stat-text"><strong>AMOA, QA and Business Analysis</strong>Fintech mobile money, Intouch and UEMOA</div>
     </div>
     <div class="hero-stat">
       <div class="stat-dot"></div>
-      <div class="stat-text">
-        <strong>Founder, BoostLab</strong>
-        AI and tech services startup, Luxembourg 2026
-      </div>
+      <div class="stat-text"><strong>Published Researcher</strong>IEEE/ACM ASE · IEEE SCAM · IEEE AFRICON</div>
     </div>
   </div>
 </section>
 
-<!-- BRIDGE / EXPERTISE -->
-<section id="bridge">
-  <div class="sec-header">
-    <span class="sec-num">01</span>
-    <h2>A bridge between four worlds</h2>
+<section id="pm">
+  <div class="sec-header"><span class="sec-num">01</span><h2>Project Manager Profile</h2></div>
+  <p class="sec-desc">A hybrid profile built at the intersection of research, venture creation and operational delivery.</p>
+  <div class="pm-grid">
+    <div class="pm-card">
+      <div class="pm-card-num">Stakeholder Management</div>
+      <div class="pm-card-title">Intermediary between worlds</div>
+      <div class="pm-card-desc">Experienced in bridging technical and business stakeholders, academic and industrial partners, and multiple institutional actors.</div>
+      <div class="pm-card-tags"><span class="mini-tag">Multi-stakeholder</span><span class="mini-tag">Documentation</span><span class="mini-tag">Ecosystem</span></div>
+    </div>
+    <div class="pm-card">
+      <div class="pm-card-num">Venture & Innovation</div>
+      <div class="pm-card-title">From lab to market</div>
+      <div class="pm-card-desc">Co-founded a TTO-supported spin-off focused on innovation. Led product delivery as Product Owner. Experienced in TRL and CRL analysis and boosting, scientific validation, and connecting projects to the right partners and funding mechanisms.</div>
+      <div class="pm-card-tags"><span class="mini-tag">TRL & CRL</span><span class="mini-tag">Spin-off</span><span class="mini-tag">Funding</span><span class="mini-tag">IP basics</span></div>
+    </div>
+    <div class="pm-card">
+      <div class="pm-card-num">Methodology</div>
+      <div class="pm-card-title">Design thinking in practice</div>
+      <div class="pm-card-desc">Design thinking is not a concept I reference. It is a method I use every year facilitating workshops that bring researchers, practitioners and students into productive dialogue.</div>
+      <div class="pm-card-tags"><span class="mini-tag">Design Thinking</span><span class="mini-tag">DSR</span><span class="mini-tag">NLP</span><span class="mini-tag">Facilitation</span></div>
+    </div>
+    <div class="pm-card">
+      <div class="pm-card-num">Delivery</div>
+      <div class="pm-card-title">End-to-end ownership</div>
+      <div class="pm-card-desc">Full project lifecycle: requirements gathering, backlog management, budget management, sprint planning, risk management, reporting and MVP delivery. Agile/Scrum practitioner with hands-on Product Owner experience.</div>
+      <div class="pm-card-tags"><span class="mini-tag">Agile/Scrum</span><span class="mini-tag">Product Owner</span><span class="mini-tag">Budget</span><span class="mini-tag">Risk</span></div>
+    </div>
+    <div class="pm-card">
+      <div class="pm-card-num">Ecosystem</div>
+      <div class="pm-card-title">Luxembourg innovation network</div>
+      <div class="pm-card-desc">Direct knowledge of the Luxembourg innovation ecosystem built through research and the spin-off experience.</div>
+      <div class="pm-card-tags"><span class="mini-tag">Luxembourg</span><span class="mini-tag">Ecosystem</span><span class="mini-tag">Funding</span></div>
+    </div>
+    <div class="pm-card">
+      <div class="pm-card-num">Leadership</div>
+      <div class="pm-card-title">Natural team builder</div>
+      <div class="pm-card-desc">Supervised 15+ students on final year projects. Led a cross-functional student team as a 2nd-year student whose project was adopted by 7 students. Mentored junior researchers, startups and developers.</div>
+      <div class="pm-card-tags"><span class="mini-tag">Supervision</span><span class="mini-tag">Mentoring</span><span class="mini-tag">Coaching</span></div>
+    </div>
   </div>
+</section>
+
+<section id="bridge" class="alt">
+  <div class="sec-header"><span class="sec-num">02</span><h2>A bridge between four worlds</h2></div>
   <p class="sec-desc">My value lies at the intersection of research rigour, engineering depth, business acumen, and user-centred thinking.</p>
   <div class="bridge-grid">
     <div class="bridge-card">
       <div class="bridge-card-num">Research</div>
       <div class="bridge-card-title">Scientific rigour</div>
       <div class="bridge-card-desc">PhD-level expertise in AI evaluation, blockchain security, and data governance. Peer-reviewed publications at IEEE/ACM venues. Reviewer for EMSE journal.</div>
-      <div class="bridge-card-tags">
-        <span class="mini-tag">LLM Evaluation</span>
-        <span class="mini-tag">Smart Contracts</span>
-        <span class="mini-tag">Data Governance</span>
-        <span class="mini-tag">RAG</span>
-      </div>
+      <div class="bridge-card-tags"><span class="mini-tag">LLM Evaluation</span><span class="mini-tag">Smart Contracts</span><span class="mini-tag">Data Governance</span></div>
     </div>
     <div class="bridge-card">
       <div class="bridge-card-num">Engineering</div>
       <div class="bridge-card-title">Technical depth</div>
       <div class="bridge-card-desc">Hands-on builder, from Python scripts to LLM pipelines to blockchain systems. Product Owner who ships, not just plans. Comfortable from prototype to production.</div>
-      <div class="bridge-card-tags">
-        <span class="mini-tag">Python</span>
-        <span class="mini-tag">Solidity</span>
-        <span class="mini-tag">OpenAI API</span>
-        <span class="mini-tag">Docker</span>
-        <span class="mini-tag">Git</span>
-      </div>
+      <div class="bridge-card-tags"><span class="mini-tag">Python</span><span class="mini-tag">Solidity</span><span class="mini-tag">OpenAI API</span><span class="mini-tag">Docker</span></div>
     </div>
     <div class="bridge-card">
       <div class="bridge-card-num">Business</div>
       <div class="bridge-card-title">Operational impact</div>
       <div class="bridge-card-desc">AMOA, Business Analysis, and Project Management across fintech and banking environments. Agile/Scrum practitioner with real delivery experience as Product Owner.</div>
-      <div class="bridge-card-tags">
-        <span class="mini-tag">AMOA</span>
-        <span class="mini-tag">Business Analysis</span>
-        <span class="mini-tag">Product Owner</span>
-        <span class="mini-tag">Agile/Scrum</span>
-      </div>
+      <div class="bridge-card-tags"><span class="mini-tag">AMOA</span><span class="mini-tag">Business Analysis</span><span class="mini-tag">Product Owner</span></div>
     </div>
     <div class="bridge-card">
       <div class="bridge-card-num">Impact</div>
-      <div class="bridge-card-title">User & market focus</div>
-      <div class="bridge-card-desc">Deep understanding of fintech users in Luxembourg and West Africa. Built and delivered products for real users. Training and capacity building across Luxembourg and Senegal.</div>
-      <div class="bridge-card-tags">
-        <span class="mini-tag">Fintech</span>
-        <span class="mini-tag">Mobile Money</span>
-        <span class="mini-tag">UEMOA</span>
-        <span class="mini-tag">UX Thinking</span>
-      </div>
+      <div class="bridge-card-title">Innovation & market focus</div>
+      <div class="bridge-card-desc">Deep understanding of the Luxembourg innovation ecosystem. Built and delivered products for real users. Training and capacity building across Luxembourg and Senegal.</div>
+      <div class="bridge-card-tags"><span class="mini-tag">Fintech</span><span class="mini-tag">Mobile Money</span><span class="mini-tag">Design Thinking</span></div>
     </div>
   </div>
 </section>
 
-<!-- SKILLS & RELATED PROFILES -->
-<section id="skills" class="alt">
-  <div class="sec-header">
-    <span class="sec-num">02</span>
-    <h2>Skills & Related Profiles</h2>
-  </div>
-  <p class="sec-desc">End-to-end coverage of the software engineering lifecycle, from requirements to validation and adoption. Each skill maps to a recognised professional profile.</p>
-
-  <style>
-    .skills-table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; }
-    .skills-table thead tr { border-bottom: 2px solid var(--ink); }
-    .skills-table th {
-      font-family: var(--mono);
-      font-size: 10px;
-      font-weight: 500;
-      color: var(--muted);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.75rem 1rem 0.75rem 0;
-      text-align: left;
-    }
-    .skills-table td {
-      padding: 1rem 1rem 1rem 0;
-      border-bottom: 1px solid var(--border);
-      vertical-align: top;
-    }
-    .skills-table tr:last-child td { border-bottom: none; }
-    .skill-action { font-size: 13px; color: var(--ink); line-height: 1.5; font-weight: 500; }
-    .skill-deliverable { font-size: 12px; color: var(--muted); line-height: 1.5; }
-    .skill-profile {
-      display: inline-block;
-      font-family: var(--mono);
-      font-size: 10px;
-      padding: 0.25rem 0.65rem;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      letter-spacing: 0.06em;
-      white-space: nowrap;
-    }
-    .skill-profile + .skill-profile { margin-top: 4px; }
-    .profile-cell { display: flex; flex-direction: column; gap: 4px; }
-    .lifecycle-banner {
-      background: var(--accent);
-      color: white;
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      padding: 0.85rem 1.25rem;
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .lifecycle-steps {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .lifecycle-step { opacity: 0.7; }
-    .lifecycle-step.covered { opacity: 1; font-weight: 500; }
-    .lifecycle-arrow { opacity: 0.4; }
-  </style>
-
-  <div class="lifecycle-banner">
-    <span>SE Lifecycle Coverage:</span>
-    <div class="lifecycle-steps">
-      <span class="lifecycle-step covered">Requirements</span>
-      <span class="lifecycle-arrow">→</span>
-      <span class="lifecycle-step covered">Specification</span>
-      <span class="lifecycle-arrow">→</span>
-      <span class="lifecycle-step covered">Design</span>
-      <span class="lifecycle-arrow">→</span>
-      <span class="lifecycle-step covered">Development</span>
-      <span class="lifecycle-arrow">→</span>
-      <span class="lifecycle-step covered">Testing</span>
-      <span class="lifecycle-arrow">→</span>
-      <span class="lifecycle-step">Deployment</span>
-      <span class="lifecycle-arrow">→</span>
-      <span class="lifecycle-step covered">Evaluation</span>
-      <span class="lifecycle-arrow">→</span>
-      <span class="lifecycle-step covered">Adoption</span>
-    </div>
-  </div>
-
-  <table class="skills-table">
-    <thead>
-      <tr>
-        <th style="width:35%">What I do</th>
-        <th style="width:35%">What it produces</th>
-        <th style="width:30%">Related profile</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><div class="skill-action">Backend development and R&D prototyping in Python and Solidity</div></td>
-        <td><div class="skill-deliverable">Working prototypes, scripts, smart contracts, R&D codebases</div></td>
-        <td><div class="profile-cell"><span class="skill-profile">R&D Engineer</span><span class="skill-profile">Backend Developer</span></div></td>
-      </tr>
-      <tr>
-        <td><div class="skill-action">Identify and assess product, technology, supplier and operational risks (obsolescence, third-party dependency, key person risk) and define mitigation strategies</div></td>
-        <td><div class="skill-deliverable">Risk register, mitigation plan, product risk assessment</div></td>
-        <td><div class="profile-cell"><span class="skill-profile">Product Owner</span><span class="skill-profile">Technical BA</span></div></td>
-      </tr>
-      <tr>
-        <td>
-          <div class="skill-action">Break down a project into a prioritised backlog, support team self-assignment, and derive a Gantt chart</div>
-        </td>
-        <td><div class="skill-deliverable">Prioritised backlog, sprint planning, Gantt chart</div></td>
-        <td><div class="profile-cell"><span class="skill-profile">Product Owner</span><span class="skill-profile">Project Manager</span></div></td>
-      </tr>
-      <tr>
-        <td><div class="skill-action">Conduct user interviews and facilitation workshops to capture needs</div></td>
-        <td><div class="skill-deliverable">Workshop outputs, user journey maps, requirements documentation</div></td>
-        <td><div class="profile-cell"><span class="skill-profile">AMOA</span><span class="skill-profile">Business Analyst</span></div></td>
-      </tr>
-      <tr>
-        <td><div class="skill-action">Document business, functional and system requirements</div></td>
-        <td><div class="skill-deliverable">BRD, FRD, SRS</div></td>
-        <td><div class="profile-cell"><span class="skill-profile">Business Analyst</span></div></td>
-      </tr>
-      <tr>
-        <td><div class="skill-action">Write user stories, use cases, and acceptance criteria</div></td>
-        <td><div class="skill-deliverable">User stories, acceptance criteria, use case diagrams</div></td>
-        <td><div class="profile-cell"><span class="skill-profile">Business Analyst</span><span class="skill-profile">Product Owner</span></div></td>
-      </tr>
-      <tr>
-        <td><div class="skill-action">Design solution architecture at a high level and map end-to-end process flows</div></td>
-        <td><div class="skill-deliverable">Solution design document, process maps</div></td>
-        <td><div class="profile-cell"><span class="skill-profile">Technical BA</span><span class="skill-profile">Solution Designer</span></div></td>
-      </tr>
-      <tr>
-        <td><div class="skill-action">Disseminate business context across a complete pipeline to understand processes and user needs</div></td>
-        <td><div class="skill-deliverable">Process analysis, as-is / to-be mapping</div></td>
-        <td><div class="profile-cell"><span class="skill-profile">AMOA</span><span class="skill-profile">Process Analyst</span></div></td>
-      </tr>
-      <tr>
-        <td><div class="skill-action">Black-box testing, anomaly reporting, and supervision of correction cycles</div></td>
-        <td><div class="skill-deliverable">Test plans, bug reports, validation reports</div></td>
-        <td><div class="profile-cell"><span class="skill-profile">QA Engineer</span><span class="skill-profile">AMOA</span></div></td>
-      </tr>
-      <tr>
-        <td><div class="skill-action">Validate the novelty of a solution against available academic models and state of the art</div></td>
-        <td><div class="skill-deliverable">Novelty assessment, state of the art review, benchmark report</div></td>
-        <td><div class="profile-cell"><span class="skill-profile">R&D Engineer</span><span class="skill-profile">AI Consultant</span></div></td>
-      </tr>
-      <tr>
-        <td><div class="skill-action">Evaluate and select AI models according to business needs and performance criteria</div></td>
-        <td><div class="skill-deliverable">Model evaluation report, selection rationale</div></td>
-        <td><div class="profile-cell"><span class="skill-profile">R&D Engineer</span><span class="skill-profile">AI Consultant</span></div></td>
-      </tr>
-      <tr>
-        <td><div class="skill-action">Publish peer-reviewed research and review scientific submissions</div></td>
-        <td><div class="skill-deliverable">IEEE/ACM publications, EMSE reviews</div></td>
-        <td><div class="profile-cell"><span class="skill-profile">Research Engineer</span></div></td>
-      </tr>
-      <tr>
-        <td><div class="skill-action">Design and deliver technical training programmes for professionals and students</div></td>
-        <td><div class="skill-deliverable">Training materials, workshop facilitation, capacity building</div></td>
-        <td><div class="profile-cell"><span class="skill-profile">Technical Trainer</span><span class="skill-profile">AMOA</span></div></td>
-      </tr>
-      <tr>
-        <td><div class="skill-action">Supervise and mentor junior researchers and interns</div></td>
-        <td><div class="skill-deliverable">Research mentoring, progress tracking, methodological support</div></td>
-        <td><div class="profile-cell"><span class="skill-profile">Research Lead</span><span class="skill-profile">Project Manager</span></div></td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- RESEARCH -->
-<section id="research" class="alt">
-  <div class="sec-header">
-    <span class="sec-num">03</span>
-    <h2>Research</h2>
-  </div>
+<section id="research">
+  <div class="sec-header"><span class="sec-num">03</span><h2>Research</h2></div>
   <p class="sec-desc">Selected publications in AI evaluation, blockchain security, and data governance.</p>
   <div class="pub-list">
     <div class="pub-item">
       <div class="pub-venue">ASE 2025</div>
-      <div>
-        <div class="pub-title">evalSmarT: An LLM-Based Framework for Evaluating Smart Contract Generated Comments</div>
-        <div class="pub-meta">Mbodji, F. N. et al. · IEEE/ACM ASE 2025, Seoul</div>
-      </div>
+      <div><div class="pub-title">evalSmarT: An LLM-Based Framework for Evaluating Smart Contract Generated Comments</div><div class="pub-meta">Mbodji, F. N. et al. · IEEE/ACM ASE 2025, Seoul</div></div>
       <div class="pub-year">2025</div>
     </div>
     <div class="pub-item">
       <div class="pub-venue">arXiv</div>
-      <div>
-        <div class="pub-title">SIEVE: Towards Verifiable Certification for Code Datasets</div>
-        <div class="pub-meta">Mbodji, F. N. et al. · arXiv:2510.02166</div>
-      </div>
-      <div class="pub-year">2025</div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-venue">Under Review</div>
-      <div>
-        <div class="pub-title">eval++: Assessing the Reliability of LLMs as Evaluators for Smart Contract Code Summarization</div>
-        <div class="pub-meta">Mbodji, F. N. et al.</div>
-      </div>
+      <div><div class="pub-title">SIEVE: Towards Verifiable Certification for Code Datasets</div><div class="pub-meta">Mbodji, F. N. et al. · arXiv:2510.02166</div></div>
       <div class="pub-year">2025</div>
     </div>
     <div class="pub-item">
       <div class="pub-venue">AFRICON</div>
-      <div>
-        <div class="pub-title">Affordance–Experimentation–Actualization–Evolution for AI-based Support of Innovation</div>
-        <div class="pub-meta">Mbodji, F. N. et al. · IEEE AFRICON 2025</div>
-      </div>
+      <div><div class="pub-title">Affordance–Experimentation–Actualization–Evolution for AI-based Support of Innovation</div><div class="pub-meta">Mbodji, F. N. et al. · IEEE AFRICON 2025</div></div>
       <div class="pub-year">2025</div>
     </div>
     <div class="pub-item">
       <div class="pub-venue">Cyber4D</div>
-      <div>
-        <div class="pub-title">ContractTrace: Retracing Smart Contract Versions for Security Analyses</div>
-        <div class="pub-meta">Mbodji, F. N. et al. · Cybersecurity4D 2025</div>
-      </div>
+      <div><div class="pub-title">ContractTrace: Retracing Smart Contract Versions for Security Analyses</div><div class="pub-meta">Mbodji, F. N. et al. · Cybersecurity4D 2025</div></div>
       <div class="pub-year">2025</div>
     </div>
     <div class="pub-item">
       <div class="pub-venue">SCAM 2022</div>
-      <div>
-        <div class="pub-title">The Devil is in the Details: Unwrapping the Cryptojacking Malware Ecosystem on Android</div>
-        <div class="pub-meta">Adjibi, B. V., Mbodji, F. N. et al. · IEEE SCAM 2022</div>
-      </div>
+      <div><div class="pub-title">The Devil is in the Details: Unwrapping the Cryptojacking Malware Ecosystem on Android</div><div class="pub-meta">Adjibi, B. V., Mbodji, F. N. et al. · IEEE SCAM 2022</div></div>
       <div class="pub-year">2022</div>
     </div>
   </div>
 </section>
 
-<!-- VENTURES -->
-<section id="ventures">
-  <div class="sec-header">
-    <span class="sec-num">04</span>
-    <h2>Ventures</h2>
-  </div>
-  <p class="sec-desc">Technology and AI services with research-grade expertise and hands-on delivery.</p>
-  <div class="venture-card">
-    <div>
-      <div class="venture-logo">BoostLab</div>
-      <div class="venture-tag">Luxembourg · Founded 2026 · AI & Tech Services</div>
-      <p class="venture-desc">
-        BoostLab is a Luxembourg-based technology company providing AI and software engineering services to organisations that want to move faster, smarter, and with more confidence. We combine research-grade expertise with hands-on delivery across AI, blockchain, and business transformation.
-      </p>
-      <p class="venture-desc">
-        Our team brings together deep technical knowledge and operational experience in fintech, scientific validation, and digital product development, serving clients across Luxembourg and West Africa.
-      </p>
-      <div class="venture-coming">
-        ✦ AI-powered products currently in development. Details to be announced.
-      </div>
-    </div>
-    <div>
-      <div class="services-list">
-        <div class="service-item">
-          <div class="service-icon">01</div>
-          <div>
-            <div class="service-title">AI Consulting & Development</div>
-            <div class="service-desc">LLM integration, RAG pipelines, prompt engineering, AI evaluation and governance.</div>
-          </div>
-        </div>
-        <div class="service-item">
-          <div class="service-icon">02</div>
-          <div>
-            <div class="service-title">Scientific Validation & QA</div>
-            <div class="service-desc">Rigorous validation of AI systems, datasets, and software products for research and industry.</div>
-          </div>
-        </div>
-        <div class="service-item">
-          <div class="service-icon">03</div>
-          <div>
-            <div class="service-title">AMOA & Business Analysis</div>
-            <div class="service-desc">Requirements analysis, functional specifications, stakeholder management, process optimisation.</div>
-          </div>
-        </div>
-        <div class="service-item">
-          <div class="service-icon">04</div>
-          <div>
-            <div class="service-title">Product Ownership</div>
-            <div class="service-desc">Backlog management, agile delivery, roadmap definition, cross-functional team coordination.</div>
-          </div>
-        </div>
-        <div class="service-item">
-          <div class="service-icon">05</div>
-          <div>
-            <div class="service-title">Blockchain & Smart Contracts</div>
-            <div class="service-desc">Smart contract development, security analysis, and blockchain-based solution design.</div>
-          </div>
-        </div>
-      </div>
-    </div>
+<section id="venture" class="alt">
+  <div class="sec-header"><span class="sec-num">04</span><h2>Venture Experience</h2></div>
+  <p class="sec-desc">Hands-on experience in venture creation, from research to MVP delivery.</p>
+  <div class="venture-block">
+    <div class="venture-logo">SnT Spin-off</div>
+    <div class="venture-tag">University of Luxembourg · SnT TTO · 2021 – 2026 · Innovation Support Tools</div>
+    <p class="venture-desc">Co-founded a spin-off supported by the SnT Technology Transfer Office, focused on innovation support tools built on LLM and RAG systems. Led product development as Product Owner from early concept to MVP delivery, including solution architecture, backlog management, budget management and stakeholder alignment. Served as project holder in the SnT Xplore Venture Programme, working with the programme team to advance the project's TRL and CRL and connect it to the right partners in the Luxembourg ecosystem.</p>
   </div>
 </section>
 
-<!-- PANELS & TALKS -->
-<section id="panels" class="alt">
-  <div class="sec-header">
-    <span class="sec-num">05</span>
-    <h2>Panels & Talks</h2>
-  </div>
+<section id="panels">
+  <div class="sec-header"><span class="sec-num">05</span><h2>Panels & Talks</h2></div>
   <p class="sec-desc">Speaking engagements, training programmes, and knowledge sharing.</p>
   <div class="panels-grid">
     <div class="panel-item">
       <div class="panel-date">2021 – ongoing</div>
-      <div>
-        <div class="panel-title">Expert and Trainer, Cybersecurity Summer School</div>
-        <div class="panel-event">LuxWays Project, LITA/ESP and University of Luxembourg, Luxembourg and Senegal</div>
-      </div>
+      <div><div class="panel-title">Expert and Trainer, Cybersecurity Summer School</div><div class="panel-event">LuxWays Project, LITA/ESP and University of Luxembourg, Luxembourg and Senegal</div></div>
     </div>
     <div class="panel-item">
       <div class="panel-date">2022</div>
-      <div>
-        <div class="panel-title">Guest Lecturer, Introduction to Blockchain</div>
-        <div class="panel-event">Université Virtuelle du Burkina Faso (UVBF), Burkina Faso</div>
-      </div>
+      <div><div class="panel-title">Guest Lecturer, Introduction to Blockchain</div><div class="panel-event">Université Virtuelle du Burkina Faso (UVBF), Burkina Faso</div></div>
     </div>
     <div class="panel-item">
       <div class="panel-date">2025</div>
-      <div>
-        <div class="panel-title">Presenter, IEEE AFRICON 2025</div>
-        <div class="panel-event">AI-based Support of Innovation, IEEE AFRICON 2025</div>
-      </div>
-    </div>
-    <div class="panel-item">
-      <div class="panel-date">2025</div>
-      <div>
-        <div class="panel-title">Presenter, IEEE/ACM ASE 2025</div>
-        <div class="panel-event">evalSmarT LLM-Based Framework, Seoul, South Korea</div>
-      </div>
+      <div><div class="panel-title">Paper Presentations</div><div class="panel-event">IEEE AFRICON 2025 · IEEE/ACM ASE 2025, Seoul, South Korea</div></div>
     </div>
   </div>
 </section>
 
-<!-- INSIGHTS -->
-<section id="insights">
-  <div class="sec-header">
-    <span class="sec-num">06</span>
-    <h2>Insights</h2>
-  </div>
-  <p class="sec-desc">Reflections on AI, research, entrepreneurship, and technology in Africa and Europe.</p>
+<section id="insights" class="alt">
+  <div class="sec-header"><span class="sec-num">06</span><h2>Insights</h2></div>
+  <p class="sec-desc">Reflections on AI, research, entrepreneurship, and technology.</p>
   <div class="insights-grid">
     <div class="insight-card">
       <div class="insight-cat">Research · AI</div>
-      <div class="insight-title">Publishing in the age of LLMs: why scientific competence is no longer enough</div>
-      <div class="insight-excerpt">With large language models, producing a good paper is no longer only about the quality of your research. Organisation, network, and strategic positioning matter more than ever.</div>
+      <div class="insight-title">Publishing in the age of LLMs: it takes more than making a scientific contribution</div>
+      <div class="insight-excerpt">With large language models, producing a good paper requires more than research quality alone. Organisation, network, and strategic positioning have become decisive factors.</div>
       <div class="insight-date">Coming soon</div>
     </div>
     <div class="insight-card">
-      <div class="insight-cat">Luxembourg · Careers</div>
-      <div class="insight-title">Luxembourg: the infrastructure that lets you become who you are, regardless of your background</div>
-      <div class="insight-excerpt">A small country that breaks barriers. How Luxembourg's ecosystem, its institutions, its openness, its networks, creates rare conditions for people to grow beyond what their starting point might have suggested.</div>
-      <div class="insight-date">Coming soon</div>
-    </div>
-    <div class="insight-card">
-      <div class="insight-cat">Africa · Market</div>
-      <div class="insight-title">West Africa's market: an untapped goldmine</div>
-      <div class="insight-excerpt">The numbers are there, the youth is there, the mobile infrastructure is there. What West Africa's technology market represents for the next decade, and why those who move now will shape what comes next.</div>
+      <div class="insight-cat">Innovation · Venture</div>
+      <div class="insight-title">A portfolio of approaches to inspire, boost and catalyse innovation</div>
+      <div class="insight-excerpt">A structured set of strategies, plans and methodologies designed to engage researchers and entrepreneurs, accelerate venture creation and build lasting innovation communities.</div>
       <div class="insight-date">Coming soon</div>
     </div>
   </div>
-  <div class="insights-cta">More articles coming soon. Follow on LinkedIn for updates.</div>
+  <div class="insights-cta">More articles coming soon.</div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="alt">
-  <div class="sec-header">
-    <span class="sec-num">07</span>
-    <h2>Contact</h2>
-  </div>
+<section id="contact">
+  <div class="sec-header"><span class="sec-num">07</span><h2>Contact</h2></div>
   <div class="contact-grid">
     <div class="contact-text">
       <h3>Ready to work together.</h3>
-      <p>For more information about any topic on this page, contact us.</p>
+      <p>For more information about any topic on this page, feel free to get in touch.</p>
       <a href="mailto:mbodjifabu@gmail.com" class="btn btn-primary" style="margin-top:0.5rem;">Send an email</a>
     </div>
     <div class="contact-links">
-      <a href="mailto:mbodjifabu@gmail.com" class="c-link">
-        <span class="c-label">Email</span>
-        <span class="c-val">mbodjifabu@gmail.com</span>
-      </a>
-      <a href="https://linkedin.com/in/fatou-ndiaye-mbodji-131728228" target="_blank" class="c-link">
-        <span class="c-label">LinkedIn</span>
-        <span class="c-val">fatou-ndiaye-mbodji</span>
-      </a>
-      <a href="https://github.com/fatoumbodji" target="_blank" class="c-link">
-        <span class="c-label">GitHub</span>
-        <span class="c-val">fatoumbodji</span>
-      </a>
-      <a href="tel:+352661386293" class="c-link">
-        <span class="c-label">Phone</span>
-        <span class="c-val">+352 661 386 293</span>
-      </a>
+      <a href="mailto:mbodjifabu@gmail.com" class="c-link"><span class="c-label">Email</span><span class="c-val">mbodjifabu@gmail.com</span></a>
+      <a href="https://linkedin.com/in/fatou-ndiaye-mbodji-131728228" target="_blank" class="c-link"><span class="c-label">LinkedIn</span><span class="c-val">fatou-ndiaye-mbodji</span></a>
+      <a href="https://github.com/fatoumbodji" target="_blank" class="c-link"><span class="c-label">GitHub</span><span class="c-val">fatoumbodji</span></a>
+      <a href="tel:+352661386293" class="c-link"><span class="c-label">Phone</span><span class="c-val">+352 661 386 293</span></a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p>© 2026 Dr. Fatou Ndiaye MBODJI</p>
   <p>Luxembourg · fatoumbodji.github.io</p>
