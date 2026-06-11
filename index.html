@@ -101,25 +101,13 @@
     .panel-title { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); margin-bottom: 3px; }
     .panel-event { font-size: 13px; color: var(--muted); }
 
-    /* INSIGHTS */
-    .insights-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1px; background: var(--border); max-width: 760px; }
-    .insight-card { background: white; padding: 2.5rem; display: flex; flex-direction: column; gap: 0; cursor: pointer; transition: background 0.2s; }
-    .insight-card:hover { background: #fafaf8; }
-    .insight-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+    .insights-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1px; background: var(--border); max-width: 600px; }
+    .insight-card { background: white; padding: 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
     .insight-cat { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; }
-    .insight-date { font-family: var(--mono); font-size: 10px; color: var(--muted); }
-    .insight-title { font-family: var(--serif); font-size: 1.35rem; color: var(--ink); line-height: 1.3; margin-bottom: 1rem; font-weight: 400; }
-    .insight-excerpt { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; }
-    .insight-toggle { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; border: none; background: none; padding: 0; display: flex; align-items: center; gap: 0.5rem; }
-    .insight-toggle::after { content: '↓'; transition: transform 0.2s; }
-    .insight-toggle.open::after { transform: rotate(180deg); }
-
-    .insight-body { display: none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
-    .insight-body.visible { display: block; }
-    .insight-body p { font-size: 14px; color: #444; line-height: 1.9; margin-bottom: 1.25rem; }
-    .insight-body p:last-child { margin-bottom: 0; }
-    .insight-body h4 { font-family: var(--serif); font-size: 1.05rem; font-weight: 600; color: var(--ink); margin-bottom: 0.6rem; margin-top: 1.5rem; }
-    .insight-body em { font-style: italic; color: var(--muted); }
+    .insight-title { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); line-height: 1.35; }
+    .insight-excerpt { font-size: 13px; color: var(--muted); line-height: 1.65; }
+    .insight-date { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-top: auto; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+    .insights-cta { margin-top: 2rem; text-align: center; font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.06em; }
 
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
     .contact-text h3 { font-family: var(--serif); font-size: 1.6rem; font-weight: 300; font-style: italic; color: var(--accent); margin-bottom: 1rem; }
@@ -168,7 +156,6 @@
     <li><a href="#research">Research</a></li>
     <li><a href="#venture">Venture</a></li>
     <li><a href="#panels">Panels</a></li>
-    <li><a href="#insights">Insights</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -348,40 +335,15 @@
   <div class="sec-header"><span class="sec-num">06</span><h2>Insights</h2></div>
   <p class="sec-desc">Reflections on AI, research, entrepreneurship, and technology.</p>
   <div class="insights-grid">
-
-    <!-- ARTICLE 1 -->
     <div class="insight-card">
-      <div class="insight-card-header">
-        <div class="insight-cat">IA · Société</div>
-        <div class="insight-date">Mai 2026</div>
-      </div>
-      <div class="insight-title">Ce que l'IA et l'argent ont en commun : les comportements qu'ils révèlent</div>
-      <div class="insight-excerpt">Le rapport que nous développons avec l'IA ressemble étrangement à celui que nous avons avec l'argent. Pas dans leur nature, mais dans les comportements sociaux qu'ils génèrent.</div>
-      <button class="insight-toggle" onclick="toggleInsight(this)">Lire l'article</button>
-      <div class="insight-body">
-        <p>Le rapport que nous développons avec l'IA ressemble étrangement à celui que nous avons avec l'argent. Pas dans leur nature, mais dans les comportements sociaux qu'ils génèrent. Pour chaque dynamique bien connue autour de l'argent, il existe un miroir dans notre rapport à l'IA.</p>
-
-        <h4>La pudeur d'afficher ce qu'on utilise vraiment</h4>
-        <p>Les gens évitent de laisser paraître qu'ils accordent beaucoup d'importance à l'argent, en insistant sur le fait qu'ils sont davantage orientés vers les relations humaines, comme si les deux ne pouvaient pas coexister. Avec l'IA, même schéma. On évite d'afficher la place qu'elle occupe dans notre travail, tout comme on évite d'afficher sa richesse. Pourtant, on tient à montrer qu'on maîtrise les derniers outils, comme celui qui dépense dans le luxe pour soigner son image sans jamais parler de son compte en banque.</p>
-
-        <h4>La simplicité comme vertu, et l'art de frimer sans en avoir l'air</h4>
-        <p>Il y a la simplicité comme vertu, ne pas laisser voir qu'on est riche même quand on l'est, et son pendant, le savoir frimer : laisser voir qu'on a de l'argent, construire son image, sans tomber dans l'excès que la simplicité fuit.</p>
-        <p>Avec l'IA, la même tension existe. Ceux qui nous invitent à "rester humains" sont souvent les premiers à nous présenter le dernier outil IA en vogue. Et quand on interroge les gens sur les bienfaits de l'IA, beaucoup répondent que l'authenticité humaine est préférable, comme si on leur demandait de choisir entre les gâteaux payants du pâtissier du coin et ceux gratuits de la tante qui fait des gâteaux maison, et qu'ils choisissaient la tante par principe, sans se demander qui fait réellement le meilleur gâteau.</p>
-
-        <h4>AI-flation : quand l'abondance érode la confiance</h4>
-        <p>Sans argent, payer est difficile. Dans un monde où l'IA existe, ne pas l'utiliser c'est accepter de produire plus lentement, de se corriger sans filet, de simuler seul ce qu'elle ferait en secondes.</p>
-        <p>Mais à l'image de l'excès monétaire qui génère de l'inflation et dévalue la monnaie, l'IA a introduit sa propre inflation. Évaluer l'IA sur la tâche ne suffit pas, son impact dépasse largement ce périmètre.</p>
-        <p>La recherche académique en est l'illustration la plus visible. Les soumissions ont explosé, les reviewers sont débordés, des citations hallucinées ont passé le peer review sans être détectées, et certaines conférences ont dû tendre des pièges pour identifier les usages non déclarés. Quand la confiance dans la production scientifique vacille, l'effet n'est pas technique. Il est sociétal.</p>
-
-        <h4>Des sagesses qu'on est en train de réécrire</h4>
-        <p>Les mêmes anecdotes qu'on raconte sur l'argent face à l'humain se reforment sur l'IA. Le panéliste qui insiste pour laisser l'IA aux experts de chaque domaine formule, sans le savoir, les mêmes sagesses populaires qu'on a mis des générations à construire sur l'argent, comme le dicton sénégalais qui dit que celui qui est plus jeune que sa richesse la gère avec plus de sérénité que celui qui est né sans l'être.</p>
-
-      </div>
+      <div class="insight-cat">Research · AI</div>
+      <div class="insight-title">Publishing in the age of LLMs: it takes more than making a scientific contribution</div>
+      <div class="insight-excerpt">With large language models, producing a good paper requires more than research quality alone. Organisation, network, and strategic positioning have become decisive factors.</div>
+      <div class="insight-date">Coming soon</div>
     </div>
 
-
-
   </div>
+  <div class="insights-cta">More articles coming soon.</div>
 </section>
 
 <section id="contact">
@@ -405,17 +367,6 @@
   <p>© 2026 Dr. Fatou Ndiaye MBODJI</p>
   <p>Luxembourg · fatoumbodji.github.io</p>
 </footer>
-
-<script>
-  function toggleInsight(btn) {
-    const body = btn.nextElementSibling;
-    const isOpen = body.classList.contains('visible');
-    body.classList.toggle('visible', !isOpen);
-    btn.classList.toggle('open', !isOpen);
-    btn.textContent = isOpen ? 'Lire l\'article' : 'Réduire';
-    if (!isOpen) btn.classList.add('open');
-  }
-</script>
 
 </body>
 </html>
