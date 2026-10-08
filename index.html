@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Fatou Ndiaye MBODJI | Project Manager · Venture & Innovation</title>
-  <meta name="description" content="Project Manager, Venture & Innovation. PhD SnT/TruX. Co-founder of a TTO-supported spin-off. Design thinking facilitator. Luxembourg innovation ecosystem.">
+  <title>Dr. Fatou Ndiaye MBODJI | DeepTech Product & Delivery Leader</title>
+  <meta name="description" content="DeepTech Product & Delivery Leader. PhD in Software Engineering. Specializing in AI/LLM, Smart Contracts and Tech Translation. Luxembourg.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -14,7 +14,7 @@
       --accent: #1A4D3A;
       --accent-light: #2E7D5A;
       --warm: #C4956A;
-      --muted: #888880;
+      --muted: #6F6F68;
       --border: #D8D4CC;
       --bg-alt: #F0EDE8;
       --mono: 'DM Mono', monospace;
@@ -25,46 +25,49 @@
     html { scroll-behavior: smooth; }
     body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.7; overflow-x: hidden; }
     body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; z-index: 1000; opacity: 0.4; }
+    a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 4rem; background: rgba(247,244,239,0.93); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
     .nav-logo { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; font-weight: 500; }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links { display: flex; gap: 1.4rem; list-style: none; }
     .nav-links a { font-family: var(--mono); font-size: 11px; color: var(--muted); text-decoration: none; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--ink); }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+    .nav-toggle { display: none; font-family: var(--mono); font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; background: none; border: 1px solid var(--border); color: var(--ink); padding: 0.4rem 0.9rem; cursor: pointer; }
+    section[id] { scroll-margin-top: 4rem; }
 
     .hero { min-height: 100vh; padding: 9rem 4rem 5rem; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 5rem; align-items: center; position: relative; }
     .hero::after { content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 38%; background: linear-gradient(160deg, #E4EFE9 0%, #D0E6D9 100%); z-index: -1; }
-    .hero-eyebrow { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
-    .hero-eyebrow::before { content: ''; width: 2rem; height: 1px; background: var(--accent); }
     h1 { font-family: var(--serif); font-size: clamp(2.8rem, 4.5vw, 4.2rem); font-weight: 300; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
     h1 em { font-style: italic; color: var(--accent); }
-    .hero-role { font-family: var(--serif); font-size: 1.2rem; font-weight: 300; color: var(--muted); font-style: italic; margin-bottom: 1.25rem; }
+    .hero-role { font-family: var(--serif); font-size: 1.35rem; font-weight: 300; color: var(--muted); font-style: italic; margin-bottom: 1.25rem; }
     .hero-formula { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.08em; padding: 0.65rem 1.1rem; border: 1px solid var(--accent); display: inline-block; margin-bottom: 1.75rem; }
-    .hero-desc { font-size: 15px; color: #444; line-height: 1.85; max-width: 520px; margin-bottom: 2.5rem; }
+    .hero-desc { font-size: 15px; color: #444; line-height: 1.85; max-width: 540px; margin-bottom: 2.5rem; }
     .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1.6rem; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none; transition: all 0.2s; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.70rem 1.6rem; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none; transition: all 0.2s; }
     .btn-primary { background: var(--accent); color: white; }
     .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); }
     .btn-outline { border: 1px solid var(--border); color: var(--ink); }
     .btn-outline:hover { border-color: var(--ink); transform: translateY(-1px); }
 
     .hero-stats { display: flex; flex-direction: column; gap: 1px; background: var(--border); }
-    .hero-stat { background: white; padding: 1.1rem 1.5rem; display: flex; align-items: center; gap: 1rem; animation: fadeUp 0.5s ease both; }
-    .hero-stat:nth-child(1) { animation-delay: 0.1s; }
-    .hero-stat:nth-child(2) { animation-delay: 0.2s; }
-    .hero-stat:nth-child(3) { animation-delay: 0.3s; }
-    .hero-stat:nth-child(4) { animation-delay: 0.4s; }
-    .hero-stat:nth-child(5) { animation-delay: 0.5s; }
+    .hero-stat { background: white; padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem; }
     .stat-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
     .stat-text { font-size: 13px; color: #444; line-height: 1.4; }
     .stat-text strong { font-weight: 500; color: var(--ink); display: block; }
 
     section { padding: 5.5rem 4rem; border-top: 1px solid var(--border); }
     section.alt { background: var(--bg-alt); }
-    .sec-header { display: flex; align-items: baseline; gap: 1.25rem; margin-bottom: 3rem; }
-    .sec-num { font-family: var(--mono); font-size: 11px; color: var(--warm); letter-spacing: 0.1em; }
+    .sec-header { display: flex; align-items: baseline; margin-bottom: 3rem; }
     h2 { font-family: var(--serif); font-size: clamp(1.8rem, 2.8vw, 2.6rem); font-weight: 300; letter-spacing: -0.01em; }
-    .sec-desc { font-size: 14px; color: var(--muted); max-width: 600px; margin-top: -1.5rem; margin-bottom: 2.5rem; line-height: 1.7; margin-left: calc(11px + 1.25rem + 1ch); }
+    .sec-desc { font-size: 14px; color: var(--muted); max-width: 640px; margin-top: -1.5rem; margin-bottom: 2.5rem; line-height: 1.7; }
+
+    .contrib-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
+    .contrib-card { background: white; padding: 2.25rem 2rem; }
+    .contrib-card h3 { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; font-style: italic; color: var(--accent); margin-bottom: 1.1rem; }
+    .contrib-card ul { list-style: none; }
+    .contrib-card li { font-size: 14px; color: #444; padding: 0.45rem 0 0.45rem 1.1rem; border-bottom: 1px solid var(--border); position: relative; line-height: 1.5; }
+    .contrib-card li:last-child { border-bottom: none; }
+    .contrib-card li::before { content: ''; position: absolute; left: 0; top: 1.05rem; width: 5px; height: 5px; border-radius: 50%; background: var(--warm); }
 
     .pm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
     .pm-card { background: white; padding: 2rem 1.75rem; }
@@ -74,25 +77,30 @@
     .pm-card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
     .mini-tag { font-family: var(--mono); font-size: 10px; padding: 0.2rem 0.6rem; border: 1px solid var(--border); color: var(--muted); letter-spacing: 0.05em; }
 
+    .chain { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border-top: 3px solid var(--accent); margin-bottom: 1px; }
+    .chain-step { background: white; padding: 2.25rem 2rem; }
+    .pm-grid-4 { grid-template-columns: repeat(4, 1fr); }
     .bridge-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); }
     .bridge-card { background: white; padding: 2rem 1.75rem; }
     .bridge-card-num { font-family: var(--mono); font-size: 11px; color: var(--warm); letter-spacing: 0.08em; margin-bottom: 0.75rem; }
     .bridge-card-title { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; color: var(--ink); margin-bottom: 0.75rem; font-style: italic; }
     .bridge-card-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
-    .bridge-card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
 
     .pub-list { display: flex; flex-direction: column; }
-    .pub-item { display: grid; grid-template-columns: 90px 1fr 80px; gap: 2rem; align-items: start; padding: 1.6rem 0; border-bottom: 1px solid var(--border); }
+    .pub-item { display: grid; grid-template-columns: 110px 1fr 80px; gap: 2rem; align-items: start; padding: 1.6rem 0; border-bottom: 1px solid var(--border); }
     .pub-item:last-child { border-bottom: none; }
     .pub-venue { font-family: var(--mono); font-size: 10px; font-weight: 500; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; padding-top: 3px; }
     .pub-title { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); margin-bottom: 4px; line-height: 1.4; }
     .pub-meta { font-size: 12px; color: var(--muted); }
     .pub-year { font-family: var(--mono); font-size: 11px; color: var(--muted); text-align: right; padding-top: 3px; }
+    .phd-lead { background: white; border: 1px solid var(--border); padding: 1.75rem 2rem; margin-bottom: 2rem; }
+    .phd-lead p { font-size: 14px; color: #444; line-height: 1.85; max-width: 760px; }
 
-    .venture-block { background: white; border: 1px solid var(--border); padding: 2.5rem; }
-    .venture-logo { font-family: var(--serif); font-size: 1.8rem; font-weight: 300; color: var(--accent); font-style: italic; margin-bottom: 0.5rem; }
-    .venture-tag { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem; }
-    .venture-desc { font-size: 14px; color: #444; line-height: 1.85; }
+    .spin-block { background: white; border: 1px solid var(--border); padding: 2.5rem; }
+    .spin-title { font-family: var(--serif); font-size: 1.8rem; font-weight: 300; color: var(--accent); font-style: italic; margin-bottom: 0.5rem; }
+    .spin-tag { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem; }
+    .spin-desc { font-size: 14px; color: #444; line-height: 1.85; max-width: 820px; }
+    .spin-block .pm-card-tags { margin-top: 1.5rem; }
 
     .panels-grid { display: flex; flex-direction: column; }
     .panel-item { display: grid; grid-template-columns: 120px 1fr; gap: 2rem; padding: 1.5rem 0; border-bottom: 1px solid var(--border); align-items: start; }
@@ -101,13 +109,19 @@
     .panel-title { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); margin-bottom: 3px; }
     .panel-event { font-size: 13px; color: var(--muted); }
 
-    .insights-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1px; background: var(--border); max-width: 600px; }
-    .insight-card { background: white; padding: 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .insights-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
+    .insight-card { background: white; padding: 2.5rem; display: flex; flex-direction: column; gap: 1rem; }
     .insight-cat { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; }
-    .insight-title { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); line-height: 1.35; }
-    .insight-excerpt { font-size: 13px; color: var(--muted); line-height: 1.65; }
-    .insight-date { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-top: auto; padding-top: 0.75rem; border-top: 1px solid var(--border); }
-    .insights-cta { margin-top: 2rem; text-align: center; font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.06em; }
+    .insight-title { font-family: var(--serif); font-size: 1.4rem; color: var(--ink); line-height: 1.35; font-weight: 400; }
+    .insight-body { font-size: 14px; color: #444; line-height: 1.8; }
+    .insight-body p { margin-bottom: 1rem; }
+    .insight-list { list-style: none; margin: 1rem 0; }
+    .insight-list li { font-size: 14px; color: #444; padding: 0.4rem 0 0.4rem 1.2rem; position: relative; line-height: 1.6; }
+    .insight-list li::before { content: ''; position: absolute; left: 0; top: 0.95rem; width: 5px; height: 5px; border-radius: 50%; background: var(--warm); }
+
+    .insight-cta { margin-top: 2rem; padding: 2rem 2.5rem; background: white; border: 1px solid var(--border); border-left: 3px solid var(--accent); display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap; }
+    .insight-cta h4 { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; color: var(--ink); margin-bottom: 0.25rem; }
+    .insight-cta p { font-size: 13px; color: var(--muted); margin: 0; }
 
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
     .contact-text h3 { font-family: var(--serif); font-size: 1.6rem; font-weight: 300; font-style: italic; color: var(--accent); margin-bottom: 1rem; }
@@ -122,26 +136,23 @@
     footer { padding: 1.75rem 4rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
     footer p { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.05em; }
 
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-    .hero-eyebrow { animation: fadeUp 0.4s ease both; }
-    .hero h1 { animation: fadeUp 0.5s 0.1s ease both; }
-    .hero-role { animation: fadeUp 0.5s 0.15s ease both; }
-    .hero-formula { animation: fadeUp 0.5s 0.2s ease both; }
-    .hero-desc { animation: fadeUp 0.5s 0.25s ease both; }
-    .hero-actions { animation: fadeUp 0.5s 0.3s ease both; }
-
     @media (max-width: 960px) {
       nav { padding: 1rem 1.5rem; }
-      .nav-links { display: none; }
-      .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; }
+      .nav-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--paper); border-bottom: 1px solid var(--border); padding: 0.5rem 1.5rem 1rem; }
+      .nav-links.open { display: flex; }
+      .nav-links a { display: block; padding: 0.7rem 0; font-size: 12px; }
+      .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; gap: 3rem; }
       .hero::after { display: none; }
       section { padding: 4rem 1.5rem; }
-      .pm-grid { grid-template-columns: 1fr 1fr; }
-      .bridge-grid { grid-template-columns: 1fr 1fr; }
+      .contrib-grid, .pm-grid, .pm-grid-4, .bridge-grid, .insights-grid { grid-template-columns: 1fr; }
+      .chain { grid-template-columns: 1fr; }
       .pub-item { grid-template-columns: 1fr; gap: 0.4rem; }
       .pub-year { display: none; }
-      .insights-grid { grid-template-columns: 1fr; }
+      .panel-item { grid-template-columns: 1fr; gap: 0.3rem; }
       .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .spin-block { padding: 1.75rem; }
+      .insight-cta { flex-direction: column; align-items: flex-start; gap: 1rem; }
       footer { flex-direction: column; gap: 0.5rem; padding: 1.5rem; }
     }
   </style>
@@ -150,223 +161,331 @@
 
 <nav>
   <a href="#top" class="nav-logo">FNM</a>
-  <ul class="nav-links">
-    <li><a href="#pm">PM Profile</a></li>
-    <li><a href="#bridge">Expertise</a></li>
-    <li><a href="#research">Research</a></li>
-    <li><a href="#venture">Venture</a></li>
-    <li><a href="#panels">Panels</a></li>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">Menu</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#spinoff">Track Record</a></li>
+    <li><a href="#pm">Delivery</a></li>
+    <li><a href="#across">Bridge</a></li>
+    <li><a href="#research">Research & Validation</a></li>
+    <li><a href="#speaking">Speaking</a></li>
+    <li><a href="#insights">Insights & Resources</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <section class="hero" id="top">
   <div>
-    <div class="hero-eyebrow">Luxembourg · Venture · Innovation · AI</div>
     <h1>Dr. Fatou<br><em>Ndiaye MBODJI</em></h1>
-    <p class="hero-role">Project Manager · Venture & Innovation · AI & Blockchain</p>
-    <div class="hero-formula">I think like a PhD · act like a manager · translate like a business analyst</div>
-    <p class="hero-desc">PhD in Software Engineering from the University of Luxembourg (SnT/TruX). Co-founder of a TTO-supported spin-off focused on innovation. Experienced in stakeholder management, TRL and CRL analysis, design thinking, and the Luxembourg innovation ecosystem.</p>
+    <p class="hero-role">DeepTech Product & Delivery Leader</p>
+    <div class="hero-formula">Bridging Scientific Innovation & Market Delivery</div>
+    <p class="hero-desc">PhD in Software Engineering (SnT, University of Luxembourg). We transform complex scientific research, AI/LLM systems, and software security breakthroughs into market-ready products. By bridging technical rigor, agile product leadership, and business strategy, we help deeptech teams and ventures structure roadmaps, accelerate TRL/CRL readiness, and scale.</p>
     <div class="hero-actions">
-      <a href="#pm" class="btn btn-primary">My PM Profile</a>
-      <a href="#contact" class="btn btn-outline">Get in touch</a>
+      <a href="#contact" class="btn btn-primary">Discuss a Project / Opportunity</a>
+      <a href="#expertise" class="btn btn-outline">Explore Expertise</a>
     </div>
   </div>
   <div class="hero-stats">
     <div class="hero-stat">
       <div class="stat-dot"></div>
-      <div class="stat-text"><strong>Project Holder, SnT Xplore Venture Programme</strong>Co-founder of a TTO-supported spin-off on innovation</div>
+      <div class="stat-text"><strong>PhD in Software Engineering</strong>AI/LLM Evaluation, Smart Contracts & Code Security (SnT/TruX)</div>
     </div>
     <div class="hero-stat">
       <div class="stat-dot"></div>
-      <div class="stat-text"><strong>Product Owner, Spin-off SnT</strong>Backlog, budget, roadmap and MVP delivery</div>
+      <div class="stat-text"><strong>Product Ownership & Strategy</strong>Roadmap execution, backlog management, budget & MVP delivery</div>
     </div>
     <div class="hero-stat">
       <div class="stat-dot"></div>
-      <div class="stat-text"><strong>PhD, University of Luxembourg</strong>AI, Blockchain and Software Engineering, SnT/TruX</div>
+      <div class="stat-text"><strong>Deeptech Acceleration (Xplore)</strong>TRL & CRL analysis, ecosystem & stakeholder alignment</div>
     </div>
     <div class="hero-stat">
       <div class="stat-dot"></div>
-      <div class="stat-text"><strong>AMOA, QA and Business Analysis</strong>Fintech mobile money, Intouch and UEMOA</div>
+      <div class="stat-text"><strong>Business Analysis & AMOA</strong>Fintech, mobile money, and regulated systems expertise</div>
     </div>
     <div class="hero-stat">
       <div class="stat-dot"></div>
-      <div class="stat-text"><strong>Published Researcher</strong>IEEE/ACM ASE · IEEE SCAM · IEEE AFRICON</div>
+      <div class="stat-text"><strong>Peer-Reviewed Research</strong>IEEE/ACM ASE, Cyber4D, AI Innovation Frameworks</div>
+    </div>
+  </div>
+</section>
+
+<section id="expertise">
+  <div class="sec-header"><h2>Core Expertise & Services</h2></div>
+  <p class="sec-desc">A structured approach to transforming scientific innovation into operational products and market adoption.</p>
+  <div class="contrib-grid">
+    <div class="contrib-card">
+      <h3>Product Strategy & MVP</h3>
+      <ul>
+        <li>Product Ownership & Backlog Structuring</li>
+        <li>Research-to-Product Roadmap Definition</li>
+        <li>MVP Scope & Technical Architecture</li>
+        <li>User Stories & System Requirements</li>
+      </ul>
+    </div>
+    <div class="contrib-card">
+      <h3>DeepTech Delivery & AMOA</h3>
+      <ul>
+        <li>Complex Project & Stakeholder Management</li>
+        <li>TRL & CRL Acceleration Support</li>
+        <li>Business Analysis & AMOA (Fintech/DeepTech)</li>
+        <li>Agile / Scrum Execution</li>
+      </ul>
+    </div>
+    <div class="contrib-card">
+      <h3>Audit & Technical Validation</h3>
+      <ul>
+        <li>LLM & AI Evaluation Frameworks</li>
+        <li>Smart Contracts & Security Analysis</li>
+        <li>Data Governance & Certification</li>
+        <li>AI Adoption Models for Innovation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="spinoff" class="alt">
+  <div class="sec-header"><h2>DeepTech Track Record</h2></div>
+  <p class="sec-desc">Concrete experience in bringing research-driven innovations to functional product stages.</p>
+  <div class="spin-block">
+    <div class="spin-title">Product Ownership & Technical Translation (AI Systems)</div>
+    <div class="spin-tag">SnT Technology Transfer Office · Luxembourg · 2021 – Present</div>
+    <p class="spin-desc">Led the end-to-end product lifecycle for LLM and RAG-based innovation tools from research concept to MVP delivery. Managed backlogs, budgets, and roadmaps in a spin-off environment. Participated in the SnT Xplore acceleration program, driving TRL/CRL advancement and establishing strategic alignment across academic labs, industrial partners, and the Luxembourg innovation ecosystem.</p>
+    <div class="pm-card-tags">
+      <span class="mini-tag">Product Strategy</span>
+      <span class="mini-tag">LLM & RAG Systems</span>
+      <span class="mini-tag">Roadmap & MVP</span>
+      <span class="mini-tag">TRL / CRL Progression</span>
+      <span class="mini-tag">Stakeholder Alignment</span>
     </div>
   </div>
 </section>
 
 <section id="pm">
-  <div class="sec-header"><span class="sec-num">01</span><h2>Project Manager Profile</h2></div>
-  <p class="sec-desc">A hybrid profile built at the intersection of research, venture creation and operational delivery.</p>
-  <div class="pm-grid">
-    <div class="pm-card">
-      <div class="pm-card-num">Stakeholder Management</div>
-      <div class="pm-card-title">Intermediary between worlds</div>
-      <div class="pm-card-desc">Experienced in bridging technical and business stakeholders, academic and industrial partners, and multiple institutional actors.</div>
-      <div class="pm-card-tags"><span class="mini-tag">Multi-stakeholder</span><span class="mini-tag">Documentation</span><span class="mini-tag">Ecosystem</span></div>
+  <div class="sec-header"><h2>Agile Delivery & Product Strategy</h2></div>
+  <p class="sec-desc">From upstream business requirements to execution and MVP delivery.</p>
+  <div class="chain">
+    <div class="chain-step">
+      <div class="pm-card-num">Upstream</div>
+      <div class="pm-card-title">Business Analysis & Strategy</div>
+      <div class="pm-card-desc">Translating ecosystem requirements into clear technical specifications. AMOA, QA and Business Analysis across fintech, banking environments, and mobile money systems.</div>
+      <div class="pm-card-tags"><span class="mini-tag">Requirements Gathering</span><span class="mini-tag">AMOA</span><span class="mini-tag">QA</span><span class="mini-tag">Fintech</span></div>
     </div>
+    <div class="chain-step">
+      <div class="pm-card-num">Execution</div>
+      <div class="pm-card-title">Product Ownership & Delivery</div>
+      <div class="pm-card-desc">Hands-on Product Ownership, from backlog refinement to MVP release. Managing full project lifecycles: budget control, sprint planning, risk mitigation, and team coordination.</div>
+      <div class="pm-card-tags"><span class="mini-tag">Product Owner</span><span class="mini-tag">Agile/Scrum</span><span class="mini-tag">Roadmap</span><span class="mini-tag">MVP</span></div>
+    </div>
+  </div>
+  <div class="pm-grid pm-grid-4">
     <div class="pm-card">
-      <div class="pm-card-num">Venture & Innovation</div>
-      <div class="pm-card-title">From lab to market</div>
-      <div class="pm-card-desc">Co-founded a TTO-supported spin-off focused on innovation. Led product delivery as Product Owner. Experienced in TRL and CRL analysis and boosting, scientific validation, and connecting projects to the right partners and funding mechanisms.</div>
-      <div class="pm-card-tags"><span class="mini-tag">TRL & CRL</span><span class="mini-tag">Spin-off</span><span class="mini-tag">Funding</span><span class="mini-tag">IP basics</span></div>
+      <div class="pm-card-num">Stakeholders</div>
+      <div class="pm-card-title">Multi-Sector Bridge</div>
+      <div class="pm-card-desc">Connecting technical engineers, executives, academic researchers, and public funding agencies.</div>
     </div>
     <div class="pm-card">
       <div class="pm-card-num">Methodology</div>
-      <div class="pm-card-title">Design thinking in practice</div>
-      <div class="pm-card-desc">Design thinking is not a concept I reference. It is a method I use every year facilitating workshops that bring researchers, practitioners and students into productive dialogue.</div>
-      <div class="pm-card-tags"><span class="mini-tag">Design Thinking</span><span class="mini-tag">DSR</span><span class="mini-tag">NLP</span><span class="mini-tag">Facilitation</span></div>
-    </div>
-    <div class="pm-card">
-      <div class="pm-card-num">Delivery</div>
-      <div class="pm-card-title">End-to-end ownership</div>
-      <div class="pm-card-desc">Full project lifecycle: requirements gathering, backlog management, budget management, sprint planning, risk management, reporting and MVP delivery. Agile/Scrum practitioner with hands-on Product Owner experience.</div>
-      <div class="pm-card-tags"><span class="mini-tag">Agile/Scrum</span><span class="mini-tag">Product Owner</span><span class="mini-tag">Budget</span><span class="mini-tag">Risk</span></div>
+      <div class="pm-card-title">Design Thinking</div>
+      <div class="pm-card-desc">Facilitating collaborative workshops to align cross-functional teams on product goals.</div>
     </div>
     <div class="pm-card">
       <div class="pm-card-num">Ecosystem</div>
-      <div class="pm-card-title">Luxembourg innovation network</div>
-      <div class="pm-card-desc">Direct knowledge of the Luxembourg innovation ecosystem built through research and the spin-off experience.</div>
-      <div class="pm-card-tags"><span class="mini-tag">Luxembourg</span><span class="mini-tag">Ecosystem</span><span class="mini-tag">Funding</span></div>
+      <div class="pm-card-title">Tech Transfer</div>
+      <div class="pm-card-desc">In-depth understanding of TRL/CRL frameworks, funding mechanisms, and innovation networks.</div>
     </div>
     <div class="pm-card">
       <div class="pm-card-num">Leadership</div>
-      <div class="pm-card-title">Natural team builder</div>
-      <div class="pm-card-desc">Supervised 15+ students on final year projects. Led a cross-functional student team as a 2nd-year student whose project was adopted by 7 students. Mentored junior researchers, startups and developers.</div>
-      <div class="pm-card-tags"><span class="mini-tag">Supervision</span><span class="mini-tag">Mentoring</span><span class="mini-tag">Coaching</span></div>
+      <div class="pm-card-title">Mentoring & Management</div>
+      <div class="pm-card-desc">Supervised 15+ software engineering projects and mentored junior researchers and developers.</div>
     </div>
   </div>
 </section>
 
-<section id="bridge" class="alt">
-  <div class="sec-header"><span class="sec-num">02</span><h2>A bridge between four worlds</h2></div>
-  <p class="sec-desc">My value lies at the intersection of research rigour, engineering depth, business acumen, and user-centred thinking.</p>
+<section id="across" class="alt">
+  <div class="sec-header"><h2>Core Pillars of Action</h2></div>
+  <p class="sec-desc">Connecting research, technical architecture, product delivery, and business needs.</p>
   <div class="bridge-grid">
     <div class="bridge-card">
-      <div class="bridge-card-num">Research</div>
-      <div class="bridge-card-title">Scientific rigour</div>
-      <div class="bridge-card-desc">PhD-level expertise in AI evaluation, blockchain security, and data governance. Peer-reviewed publications at IEEE/ACM venues. Reviewer for EMSE journal.</div>
-      <div class="bridge-card-tags"><span class="mini-tag">LLM Evaluation</span><span class="mini-tag">Smart Contracts</span><span class="mini-tag">Data Governance</span></div>
+      <div class="bridge-card-num">01. Research</div>
+      <div class="bridge-card-title">Scientific Rigor</div>
+      <div class="bridge-card-desc">PhD-level background in AI evaluation, blockchain security, and data governance. Peer reviewer for top software engineering journals.</div>
     </div>
     <div class="bridge-card">
-      <div class="bridge-card-num">Engineering</div>
-      <div class="bridge-card-title">Technical depth</div>
-      <div class="bridge-card-desc">Hands-on builder, from Python scripts to LLM pipelines to blockchain systems. Product Owner who ships, not just plans. Comfortable from prototype to production.</div>
-      <div class="bridge-card-tags"><span class="mini-tag">Python</span><span class="mini-tag">Solidity</span><span class="mini-tag">OpenAI API</span><span class="mini-tag">Docker</span></div>
+      <div class="bridge-card-num">02. Tech</div>
+      <div class="bridge-card-title">Technical Mastery</div>
+      <div class="bridge-card-desc">Strong comprehension of software architecture, LLM pipelines, and smart contracts to lead engineering discussions effectively.</div>
     </div>
     <div class="bridge-card">
-      <div class="bridge-card-num">Business</div>
-      <div class="bridge-card-title">Operational impact</div>
-      <div class="bridge-card-desc">AMOA, Business Analysis, and Project Management across fintech and banking environments. Agile/Scrum practitioner with real delivery experience as Product Owner.</div>
-      <div class="bridge-card-tags"><span class="mini-tag">AMOA</span><span class="mini-tag">Business Analysis</span><span class="mini-tag">Product Owner</span></div>
+      <div class="bridge-card-num">03. Product</div>
+      <div class="bridge-card-title">Delivery Discipline</div>
+      <div class="bridge-card-desc">Agile & Scrum leadership, structuring roadmaps, managing sprints, and delivering functional MVPs on schedule.</div>
     </div>
     <div class="bridge-card">
-      <div class="bridge-card-num">Impact</div>
-      <div class="bridge-card-title">Innovation & market focus</div>
-      <div class="bridge-card-desc">Deep understanding of the Luxembourg innovation ecosystem. Built and delivered products for real users. Training and capacity building across Luxembourg and Senegal.</div>
-      <div class="bridge-card-tags"><span class="mini-tag">Fintech</span><span class="mini-tag">Mobile Money</span><span class="mini-tag">Design Thinking</span></div>
+      <div class="bridge-card-num">04. Business</div>
+      <div class="bridge-card-title">Market Adoption</div>
+      <div class="bridge-card-desc">Analyzing market drivers, regulatory constraints, and organizational factors for smooth technology integration.</div>
     </div>
   </div>
 </section>
 
 <section id="research">
-  <div class="sec-header"><span class="sec-num">03</span><h2>Research</h2></div>
-  <p class="sec-desc">Selected publications in AI evaluation, blockchain security, and data governance.</p>
+  <div class="sec-header"><h2>Research & Technical Validation</h2></div>
+  <p class="sec-desc">Scientific contributions providing the basis for deep technical understanding, LLM evaluation, and AI-driven innovation frameworks.</p>
+  <div class="phd-lead">
+    <p>Our research covers the complete lifecycle of emerging technologies: from technical verification and security (AI/LLM, Smart Contracts, data governance) to structuring framework models for AI-based support in innovation contexts.</p>
+  </div>
   <div class="pub-list">
     <div class="pub-item">
-      <div class="pub-venue">ASE 2025</div>
-      <div><div class="pub-title">evalSmarT: An LLM-Based Framework for Evaluating Smart Contract Generated Comments</div><div class="pub-meta">Mbodji, F. N. et al. · IEEE/ACM ASE 2025, Seoul</div></div>
+      <div class="pub-venue">IEEE/ACM ASE</div>
+      <div><div class="pub-title">evalSmarT: An LLM-Based Framework for Evaluating Smart Contract Generated Comments</div><div class="pub-meta">Mbodji, F. N. et al. · IEEE/ACM ASE, Seoul</div></div>
+      <div class="pub-year">2025</div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-venue">Research Paper</div>
+      <div><div class="pub-title">Affordance–Experimentation–Actualization-Evolution for AI-based Support of Innovation</div><div class="pub-meta">Mbodji, F. N. et al. · AI Strategy & Innovation Frameworks</div></div>
+      <div class="pub-year">2024</div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-venue">Cyber4D</div>
+      <div><div class="pub-title">ContractTrace: Retracing Smart Contract Versions for Security Analyses</div><div class="pub-meta">Mbodji, F. N. et al. · Cybersecurity4D</div></div>
       <div class="pub-year">2025</div>
     </div>
     <div class="pub-item">
       <div class="pub-venue">arXiv</div>
-      <div><div class="pub-title">SIEVE: Towards Verifiable Certification for Code Datasets</div><div class="pub-meta">Mbodji, F. N. et al. · arXiv:2510.02166</div></div>
+      <div><div class="pub-title">SIEVE: Towards Verifiable Certification for Code Datasets</div><div class="pub-meta">Mbodji, F. N. et al. · Data Governance & AI Certification</div></div>
       <div class="pub-year">2025</div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-venue">AFRICON</div>
-      <div><div class="pub-title">Affordance–Experimentation–Actualization–Evolution for AI-based Support of Innovation</div><div class="pub-meta">Mbodji, F. N. et al. · IEEE AFRICON 2025</div></div>
-      <div class="pub-year">2025</div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-venue">Cyber4D</div>
-      <div><div class="pub-title">ContractTrace: Retracing Smart Contract Versions for Security Analyses</div><div class="pub-meta">Mbodji, F. N. et al. · Cybersecurity4D 2025</div></div>
-      <div class="pub-year">2025</div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-venue">SCAM 2022</div>
-      <div><div class="pub-title">The Devil is in the Details: Unwrapping the Cryptojacking Malware Ecosystem on Android</div><div class="pub-meta">Adjibi, B. V., Mbodji, F. N. et al. · IEEE SCAM 2022</div></div>
-      <div class="pub-year">2022</div>
     </div>
   </div>
 </section>
 
-<section id="venture" class="alt">
-  <div class="sec-header"><span class="sec-num">04</span><h2>Venture Experience</h2></div>
-  <p class="sec-desc">Hands-on experience in venture creation, from research to MVP delivery.</p>
-  <div class="venture-block">
-    <div class="venture-logo">SnT Spin-off</div>
-    <div class="venture-tag">University of Luxembourg · SnT TTO · 2021 – 2026 · Innovation Support Tools</div>
-    <p class="venture-desc">Co-founded a spin-off supported by the SnT Technology Transfer Office, focused on innovation support tools built on LLM and RAG systems. Led product development as Product Owner from early concept to MVP delivery, including solution architecture, backlog management, budget management and stakeholder alignment. Served as project holder in the SnT Xplore Venture Programme, working with the programme team to advance the project's TRL and CRL and connect it to the right partners in the Luxembourg ecosystem.</p>
-  </div>
-</section>
-
-<section id="panels">
-  <div class="sec-header"><span class="sec-num">05</span><h2>Panels & Talks</h2></div>
-  <p class="sec-desc">Speaking engagements, training programmes, and knowledge sharing.</p>
+<section id="speaking" class="alt">
+  <div class="sec-header"><h2>Speaking & Training</h2></div>
+  <p class="sec-desc">Delivering specialized training and conference talks on software engineering, security, and emerging tech.</p>
   <div class="panels-grid">
     <div class="panel-item">
-      <div class="panel-date">2021 – ongoing</div>
-      <div><div class="panel-title">Expert and Trainer, Cybersecurity Summer School</div><div class="panel-event">LuxWays Project, LITA/ESP and University of Luxembourg, Luxembourg and Senegal</div></div>
-    </div>
-    <div class="panel-item">
-      <div class="panel-date">2022</div>
-      <div><div class="panel-title">Guest Lecturer, Introduction to Blockchain</div><div class="panel-event">Université Virtuelle du Burkina Faso (UVBF), Burkina Faso</div></div>
+      <div class="panel-date">2021 – Present</div>
+      <div><div class="panel-title">Expert & Trainer, Cybersecurity Summer School</div><div class="panel-event">University of Luxembourg and international academic partners</div></div>
     </div>
     <div class="panel-item">
       <div class="panel-date">2025</div>
-      <div><div class="panel-title">Paper Presentations</div><div class="panel-event">IEEE AFRICON 2025 · IEEE/ACM ASE 2025, Seoul, South Korea</div></div>
+      <div><div class="panel-title">Conference Presentations</div><div class="panel-event">IEEE/ACM ASE, Seoul</div></div>
+    </div>
+    <div class="panel-item">
+      <div class="panel-date">2022</div>
+      <div><div class="panel-title">Guest Lecturer, Introduction to Blockchain Systems</div><div class="panel-event">Université Virtuelle du Burkina Faso (UVBF)</div></div>
     </div>
   </div>
 </section>
 
-<section id="insights" class="alt">
-  <div class="sec-header"><span class="sec-num">06</span><h2>Insights</h2></div>
-  <p class="sec-desc">Reflections on AI, research, entrepreneurship, and technology.</p>
+<section id="insights">
+  <div class="sec-header"><h2>Insights & Resources</h2></div>
+  <p class="sec-desc">Perspectives on tech transfer, product strategy, and field-tested methods for early-stage teams.</p>
+  
   <div class="insights-grid">
+    <!-- Carte 1 : L'article stratégique -->
     <div class="insight-card">
-      <div class="insight-cat">Research · AI</div>
-      <div class="insight-title">Publishing in the age of LLMs: it takes more than making a scientific contribution</div>
-      <div class="insight-excerpt">With large language models, producing a good paper requires more than research quality alone. Organisation, network, and strategic positioning have become decisive factors.</div>
-      <div class="insight-date">Coming soon</div>
+      <div class="insight-cat">Tech Transfer & Strategy</div>
+      <div class="insight-title">What Does "Building a Bridge" Really Mean in DeepTech?</div>
+      <div class="insight-body">
+        <p>Building a bridge between research and business goes beyond connecting engineering teams with business units. It means recognizing that the same skills, roles, and practices operate under fundamentally different paradigms in each world.</p>
+        
+        <div id="more-insight" style="display: none; margin-top: 1rem;">
+          <ul class="insight-list">
+            <li>Managing a research team differs from leading a business delivery unit.</li>
+            <li>Collaborating with an academic co-author is not the same as working with a corporate partner.</li>
+            <li>Responding to a peer reviewer requires a different mindset than satisfying a commercial client.</li>
+            <li>Communicating with a scientific audience demands rigour, while communicating with executives demands clarity and impact.</li>
+            <li>University teaching builds knowledge, whereas professional training develops operational practice.</li>
+          </ul>
+          <p>In software engineering, this function mirrors the role of <strong>AMOA (Business Analysis & Strategy)</strong>: understanding technical architecture and business objectives to enable smooth collaboration across teams.</p>
+          <p>For deeptech ventures and research spin-offs, being a bridge means identifying these differences and adapting existing academic excellence into scalable, market-ready operations.</p>
+        </div>
+
+        <button onclick="toggleInsight()" id="read-more-btn" class="btn btn-outline" style="margin-top: 1rem; cursor: pointer; padding: 0.4rem 1rem;">Read full perspective (+)</button>
+      </div>
     </div>
 
+    <!-- Carte 2 : La Toolbox / Partage d'expérience (Coming Soon) -->
+    <div class="insight-card">
+      <div class="insight-cat">Resources · Launching Soon</div>
+      <div class="insight-title">Practical Tools & Methods for Early-Stage Teams</div>
+      <div class="insight-body">
+        <p>When starting a research spin-off or deeptech initiative, founding teams often need to organize their work, run initial field validations, and structure their product vision long before full-time hiring takes place.</p>
+        <p>This upcoming hub shares field-tested methodologies, lightweight organizational frameworks, and practical takeaways learned from adapting academic theory into real-world project execution.</p>
+        
+        <div class="pm-card-tags" style="margin-top: 1.5rem;">
+          <span class="mini-tag">TRL & CRL Field Frameworks</span>
+          <span class="mini-tag">Early Team Organization</span>
+          <span class="mini-tag">Research-to-Practice Tools</span>
+          <span class="mini-tag">Applied Methodologies</span>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="insights-cta">More articles coming soon.</div>
+
+  <div class="insight-cta">
+    <div>
+      <h4>Planning a DeepTech project or spin-off trajectory?</h4>
+      <p>From structuring product roadmaps to bridging R&D with business execution, let's discuss your delivery milestones.</p>
+    </div>
+    <a href="#contact" class="btn btn-primary" style="white-space: nowrap;">Discuss Your Project</a>
+  </div>
 </section>
 
-<section id="contact">
-  <div class="sec-header"><span class="sec-num">07</span><h2>Contact</h2></div>
+<section id="contact" class="alt">
+  <div class="sec-header"><h2>Contact</h2></div>
   <div class="contact-grid">
     <div class="contact-text">
-      <h3>Ready to work together.</h3>
-      <p>For more information about any topic on this page, feel free to get in touch.</p>
-      <a href="mailto:mbodjifabu@gmail.com" class="btn btn-primary" style="margin-top:0.5rem;">Send an email</a>
+      <h3>Let's collaborate.</h3>
+      <p>Whether you are seeking strategic product delivery, advisory for a deeptech project, or exploring leadership opportunities, get in touch to schedule a conversation.</p>
+      <a href="mailto:mbodjifabu@gmail.com" class="btn btn-primary" style="margin-top:0.5rem;">Send an Email</a>
     </div>
     <div class="contact-links">
       <a href="mailto:mbodjifabu@gmail.com" class="c-link"><span class="c-label">Email</span><span class="c-val">mbodjifabu@gmail.com</span></a>
-      <a href="https://linkedin.com/in/fatou-ndiaye-mbodji-131728228" target="_blank" class="c-link"><span class="c-label">LinkedIn</span><span class="c-val">fatou-ndiaye-mbodji</span></a>
-      <a href="https://github.com/fatoumbodji" target="_blank" class="c-link"><span class="c-label">GitHub</span><span class="c-val">fatoumbodji</span></a>
-      <a href="tel:+352661386293" class="c-link"><span class="c-label">Phone</span><span class="c-val">+352 661 386 293</span></a>
+      <a href="https://linkedin.com/in/fatou-ndiaye-mbodji-131728228" target="_blank" rel="noopener" class="c-link"><span class="c-label">LinkedIn</span><span class="c-val">fatou-ndiaye-mbodji</span></a>
     </div>
   </div>
 </section>
 
 <footer>
   <p>© 2026 Dr. Fatou Ndiaye MBODJI</p>
-  <p>Luxembourg · fatoumbodji.github.io</p>
+  <p>Luxembourg</p>
 </footer>
+
+<script>
+  (function () {
+    var btn = document.querySelector('.nav-toggle');
+    var list = document.getElementById('nav-links');
+    var links = list.querySelectorAll('a');
+    btn.addEventListener('click', function () {
+      var open = list.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+    links.forEach(function (a) { a.addEventListener('click', function () { list.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }); });
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id); });
+          }
+        });
+      }, { rootMargin: '-40% 0px -55% 0px' });
+      links.forEach(function (a) { var t = document.querySelector(a.getAttribute('href')); if (t) io.observe(t); });
+    }
+  })();
+
+  function toggleInsight() {
+    var content = document.getElementById("more-insight");
+    var btn = document.getElementById("read-more-btn");
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      btn.innerHTML = "Show less (-)";
+    } else {
+      content.style.display = "none";
+      btn.innerHTML = "Read full perspective (+)";
+    }
+  }
+</script>
 
 </body>
 </html>
