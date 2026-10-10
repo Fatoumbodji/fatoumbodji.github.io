@@ -1,0 +1,114 @@
++Skip to content
+-Thought Leadership
++Research
+-Helping deeptech teams turn research into working products: from roadmap and requirements to delivery and first commercial conversations. PhD in Software Engineering (SnT, University of Luxembourg), with hands-on experience in AI/LLM systems, smart contracts, product ownership and B2B sales enablement.
++Turning research into working products: from roadmap and requirements to delivery and first commercial conversations. PhD in Software Engineering (SnT, University of Luxembourg), with hands-on experience in AI/LLM systems, smart contracts, product ownership and B2B sales enablement.
+-Sales Operations & Enablement
++Commercial Operations & Enablement
+-Core Expertise & Services
+-A structured approach to transforming scientific innovation into operational products and B2B team enablement.
++Core Expertise
++A structured approach to turning scientific innovation into operational products and commercial readiness.
+-Sales Operations & Enablement Facilitation
+-Structuring tools and methods for technical teams operating without a dedicated sales hire.
++Commercial Operations & Enablement
++Structuring tools and methods that help technical teams run their commercial and B2B operations.
+-Product Ownership & Sales Ops
+-Hands-on Product Ownership and technical guidance. Coordinating developer teams, establishing black-box QA testing, and deploying Sales Ops frameworks (CRM, prospecting scripts) for B2B readiness.
++Product Ownership & Commercial Operations
++Hands-on Product Ownership and technical guidance. Coordinating developer teams, establishing black-box QA testing, and deploying commercial operations frameworks (CRM, prospecting scripts) for B2B readiness.
+-Sales Ops
++Commercial Operations
+-Founder Guidance
+-Acting as a technical bridge for non-technical startup founders: managing external dev teams and software architecture.
++Technical Bridge
++Acting as a technical bridge for non-technical founders: managing external dev teams and software architecture.
+-Sales Enablement
++Commercial Enablement
+-Scaling DeepTech Delivery
+-An operational partner bridging scientific research, agile product execution, and commercial readiness for deeptech ventures and high-growth initiatives.
++Ways of Working
++An approach that bridges scientific research, agile product execution and commercial readiness in deeptech projects.
+-This approach does not replace TTOs, incubators, or existing acceleration programs. It acts as an embedded execution layer on the ground, providing the methods, tools, and operational capacity teams need across key project milestones.
++This approach works alongside TTOs, incubators and existing acceleration programs. It acts as an embedded execution layer on the ground, providing the methods, tools, and operational capacity teams need across key project milestones.
+-Early-stage deeptech projects move fast between complex disciplines. Founding teams are accompanied through critical transitions while keeping their vision, technical ownership, and decisions intact.
++Early-stage deeptech projects move fast between complex disciplines. Teams are supported through critical transitions while keeping their vision, technical ownership, and decisions intact.
+-Technical proxy and Sales Operations enablement
+-Ways of Working
+-Capacities can be built internally, delegated, or driven directly alongside the project team depending on project maturity and resource requirements at each developmental stage.
++Technical proxy and commercial operations enablement
++Collaboration Modes
++Capabilities can be built within the team or driven directly alongside it, depending on project maturity and resource requirements at each developmental stage.
+-Thought Leadership & Scientific Contributions
++Research & Scientific Contributions
++Cyber4D
++ContractTrace: Retracing Smart Contract Versions for Security Analyses
++Mbodji, F. N. et al. · Cybersecurity4D
++2025
++arXiv
++SIEVE: Towards Verifiable Certification for Code Datasets
++Mbodji, F. N. et al. · Data Governance & AI Certification
++2025
+-Cyber4D
+-ContractTrace: Retracing Smart Contract Versions for Security Analyses
+-Mbodji, F. N. et al. · Cybersecurity4D
+-2025
+-arXiv
+-SIEVE: Towards Verifiable Certification for Code Datasets
+-Mbodji, F. N. et al. · Data Governance & AI Certification
+-2025
++IEEE SCAM
++The Devil is in the Details: Unwrapping the Cryptojacking Malware Ecosystem on Android
++Adjibi, B. V., Mbodji, F. N. et al. · IEEE SCAM
++2022
+-Perspectives on tech transfer, product strategy, situational leadership, and field-tested methods for early-stage technical teams.
+-Sales Operations & Methodology
+-Structuring B2B Workflows Before Your First Sales Hire
+-In early-stage DeepTech ventures, hiring a full-time sales closer often comes after establishing initial market validation. During this interim phase, technical leads and founding teams must conduct their own client interactions directly.
+-The approach is strictly methodological, educational, and operational:
+-Pedagogy over Pitching:
+-The goal is not to replace salespeople or to close deals on behalf of the team, but to teach technical founders the operational methods of B2B sales enablement.
++Perspectives on tech transfer, product delivery and leadership, with working notes on methods for early-stage technical projects.
++Method note · Commercial Operations
++October 2026
++Structuring B2B Workflows in Early-Stage Deeptech Projects
++In early-stage deeptech projects, a dedicated sales role often comes only after initial market validation. During this interim phase, technical leads and founding teams conduct their own client interactions.
++The approach is methodological and operational:
++Method over Pitching:
++The goal is not to replace salespeople or to close deals on behalf of the team, but to equip technical teams with the operational methods of B2B sales enablement.
+-Technical teams gain the structure, methodology, and confidence to lead their own early B2B meetings effectively until they are ready to onboard a dedicated sales hire.
++Technical teams gain the structure, methodology, and confidence to lead early B2B meetings effectively until a dedicated sales role is in place.
+-Tech Transfer & Translation
++Essay · Tech Transfer & Translation
++October 2026
+-Leadership & Delivery Management
++Reflection · Leadership & Delivery
++October 2026
+-The Observed Fact: The Gap Between Discourse and Action
+-It is not uncommon for a collaborator to display a high level of assurance and apparent mastery during initial alignments on a new task.
++A Common Pattern: Confidence at Kickoff
++It is common for team members to display a high level of assurance during initial alignments on a new task, which can mask gaps in task-specific competence.
+-The accuracy of the initial diagnosis is tested during the execution phase. On the ground, a specific pattern may emerge where a purely directive approach reaches its limits: instructions do not lead to deliverables, ownership of the task is bypassed, and project progress stalls.
+-Operational Alignment: Rectifying the Leadership Trajectory
+-Acknowledge that previous instructions delivered via a directive mode (Style 1) did not generate the targeted operational output.
+-Pivot to Style 2 (Coaching) to re-explain objectives, systematically verify practical understanding, and closely support the technical onboarding.
++The accuracy of the initial diagnosis is tested during the execution phase. On the ground, a specific pattern may emerge where a purely directive approach reaches its limits: instructions may not translate into deliverables, task ownership can weaken, and progress can stall.
++Adjusting the Management Style
++Recognise when a directive mode (Style 1) is not producing the targeted output.
++Shift to Style 2 (Coaching): re-explain objectives, verify practical understanding systematically, and closely support technical onboarding.
+-Startup Enablement Toolkit
+-0 to 1 Methodological Toolkit: Structuring Your DeepTech Venture
+-A pragmatic guide and practical toolkit designed to take early-stage spin-offs and technical founders from initial research assets to market-ready B2B operations.
++Methods & Toolkit
++Methodological Toolkit: from Research Asset to Operational Product
++A pragmatic guide and practical toolkit for taking research assets to market-ready B2B operations.
+-Ready to accelerate your DeepTech delivery milestones?
+-Turning scientific breakthroughs into high-impact, market-ready products starts with a conversation about the roadmap.
++Questions or exchanges on these topics are welcome.
++Feel free to get in touch about product delivery, deeptech projects or research collaboration.
+-Open to conversations around product delivery, deeptech ventures, and collaborations. Book a short call at a time that suits you, or send a message and a reply will follow.
++Open to conversations around product delivery, deeptech projects, and research collaborations. Book a short call at a time that suits you, or send a message and a reply will follow.
+-Deeptech venture or project
+-Sales operations & enablement
++Deeptech project or research collaboration
++Business analysis & commercial operations
